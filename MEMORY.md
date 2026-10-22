@@ -8,7 +8,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 
 ## Status atual (2026-10-21)
 
-**Local, sem deploy.** Código em `lp-4e-energy/` (sem git ainda: Pedro não pediu commit/push).
+**No GitHub, sem deploy.** Repositório público https://github.com/mppartnersprincipal-svg/lp-4-energy (raiz = esta pasta; app em `lp-4e-energy/`, Root Directory na Vercel). Briefing, manual e logo originais ficam fora do git (`.gitignore` da raiz).
 
 | Frente | Status |
 |---|---|
@@ -17,7 +17,8 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 | Tracking fase 1 (dataLayer, UTMs, eventos, data-cta) | ✅ testado com Playwright (`scripts/qa.mjs`) |
 | Painel /dashboard (coletor, 5 rotas, UI com a marca, migration `energy4e_*`) | ✅ código pronto; migration **não aplicada** |
 | Contêiner do GTM | ⏳ aguarda IDs (GTM, GA4, conversão do Ads, Pixel) |
-| Repo GitHub + Vercel + domínio | ⏳ aguarda pedido do Pedro |
+| Repo GitHub | ✅ `lp-4-energy`, branch `main` (22/10/2026) |
+| Vercel + domínio | ⏳ aguarda pedido do Pedro |
 | Lighthouse mobile (build de produção, simulado), visual v2 | ⚠️ Performance 84 a 87 · SEO 100 · A11y 100 · Boas práticas 100 · LCP 3,9 a 4,1 s · CLS 0 · TBT 70 a 130 ms · desktop 100 (LCP 0,8 s). O LCP ficou no limite do gate (4 s): preço das fotos e das seções presas ao scroll, como na Visão Solar (66 a 78). Medir de novo em produção (PageSpeed) depois do deploy |
 
 ---
@@ -33,7 +34,8 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 - [ ] Revisão técnico-comercial do Marcos nas seções `rentabilidade`, `seguranca` e FAQ
 
 ### Internas (M|P)
-- [ ] Criar repo `mppartnersprincipal-svg/lp-4e-energy` (público, como os demais) e projeto Vercel `lp-4e-energy` com Root Directory `lp-4e-energy` quando o Pedro pedir
+- [x] Repo `mppartnersprincipal-svg/lp-4-energy` criado e enviado (22/10/2026)
+- [ ] Projeto Vercel com Root Directory `lp-4e-energy` quando o Pedro pedir
 - [ ] Gerar `gtm/GTM-XXX-importar.json` com a skill `lp-tracking-dashboard` quando chegarem os IDs; Pedro importa e publica
 - [ ] Aplicar `supabase/migrations/0001_energy4e_analytics.sql` no projeto compartilhado (`list_tables` antes para confirmar que o prefixo é novo)
 - [ ] Cadastrar variáveis na Vercel (tabela em `DASHBOARD.md`) + redeploy; visita `qa-seed`; conferir Ads (conta da 4E) e GA4 (Leitor)
@@ -55,6 +57,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 | 2026-10-21 | Conceito visual "Telemetria" (navy + marcas de escala em ciano); v1 sem fotos foi rejeitada pelo Pedro → v2 com fotos ilustrativas do Unsplash, legendadas como ilustrativas, até chegarem as reais | Pedro quer o nível da Visão Solar e da Pacheco (fotos, ícones únicos, animação de scroll) |
 | 2026-10-21 | Logo: recorte circular do JPEG em PNG/WebP; header usa símbolo + nome em texto | Não há vetor; manual exige 160px para a arte completa |
 | 2026-10-21 | Fontes locais: Montserrat 700 estática (títulos, preload) + Inter variável (corpo, sem preload) | Prompt padrão exige `next/font/local`; menos bytes no caminho do LCP |
+| 2026-10-22 | LP aprovada pelo Pedro ("ÓTIMO! Ficou muito bom!"). Primeiro commit enviado para `lp-4-energy`; LP salva como referência na skill `landing-page-references` (`sites/lp-4e-energy`, `patterns.md` consolidado) |
 | 2026-10-22 | Hero: foto `loading="eager"` sem `priority`; no celular o anel nasce da borda inferior (`--cy: 100% + 8vw`) e a foto sobe 22vh até o anel abrir | Deixar o título como LCP; testado `font-display: optional` (sem ganho no LCP simulado, revertido para `swap`) |
 | 2026-10-21 | `Reveal` em CSS + `RevealObserver` (um IntersectionObserver), Lenis no ocioso | Molas por elemento pesavam na hidratação: Lighthouse 78 → 90, LCP 4,1 → 3,2 s |
 | 2026-10-21 | Prefixo Supabase `energy4e`, chaves do navegador `fe-*`, repo/Vercel `lp-4e-energy` | Prefixo precisa começar com letra |

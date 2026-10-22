@@ -32,5 +32,5 @@ Tudo o que a LP mostra sem confirmação do cliente está marcado aqui. Nada aba
 | Conta do Google Ads da 4E (10 dígitos) e conversão "Conversa no WhatsApp" | Vercel + GTM |
 | Variáveis do painel (`SUPABASE_*`, `DASHBOARD_*`, `GA4_*`, `GOOGLE_*`) | `DASHBOARD.md` |
 | Migration `supabase/migrations/0001_energy4e_analytics.sql` | aplicar no projeto compartilhado |
-| Repositório no GitHub e projeto na Vercel | ainda não criados (sem commit/push sem pedido) |
+| Projeto na Vercel (Root Directory `lp-4e-energy`) e domínio | repo já no GitHub (`lp-4-energy`); deploy aguarda pedido |
 | Fotos ilustrativas | Unsplash (licença livre), 9 imagens; substituir pelas reais antes de anunciar com "nossas usinas" |
