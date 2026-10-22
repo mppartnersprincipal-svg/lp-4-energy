@@ -91,7 +91,7 @@ export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             <div className="flex flex-col gap-3">
               <Button
                 href={anchorHref(pathname, DIAGNOSTIC_ANCHOR)}
-                variant="white"
+                variant="liquid-clear"
                 size="lg"
                 onClick={onClose}
                 data-track="click_cta"

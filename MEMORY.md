@@ -58,6 +58,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 | 2026-10-21 | Logo: recorte circular do JPEG em PNG/WebP; header usa símbolo + nome em texto | Não há vetor; manual exige 160px para a arte completa |
 | 2026-10-21 | Fontes locais: Montserrat 700 estática (títulos, preload) + Inter variável (corpo, sem preload) | Prompt padrão exige `next/font/local`; menos bytes no caminho do LCP |
 | 2026-10-22 | LP aprovada pelo Pedro ("ÓTIMO! Ficou muito bom!"). Primeiro commit enviado para `lp-4-energy`; LP salva como referência na skill `landing-page-references` (`sites/lp-4e-energy`, `patterns.md` consolidado) |
+| 2026-10-22 | CTAs com efeito "liquid glass" (pedido do Pedro, a partir de um componente shadcn): integrado no `Button` próprio com CSS + filtro SVG, sem instalar shadcn/Radix/cva | Projeto não usa shadcn; o efeito é só `backdrop-filter` + sombras internas |
 | 2026-10-22 | Hero: foto `loading="eager"` sem `priority`; no celular o anel nasce da borda inferior (`--cy: 100% + 8vw`) e a foto sobe 22vh até o anel abrir | Deixar o título como LCP; testado `font-display: optional` (sem ganho no LCP simulado, revertido para `swap`) |
 | 2026-10-21 | `Reveal` em CSS + `RevealObserver` (um IntersectionObserver), Lenis no ocioso | Molas por elemento pesavam na hidratação: Lighthouse 78 → 90, LCP 4,1 → 3,2 s |
 | 2026-10-21 | Prefixo Supabase `energy4e`, chaves do navegador `fe-*`, repo/Vercel `lp-4e-energy` | Prefixo precisa começar com letra |

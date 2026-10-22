@@ -31,7 +31,7 @@ export function OtherSolutions() {
                   <div className="flex flex-1 flex-col gap-3 p-6">
                     <h3 className="text-display font-bold text-ink">{title}</h3>
                     <p className="text-sm leading-relaxed text-ink-soft">{description}</p>
-                    <WhatsAppButton ctaId={ctaId} message={message} label="Saber mais" variant="outline-dark" className="mt-auto self-start" />
+                    <WhatsAppButton ctaId={ctaId} message={message} label="Saber mais" variant="liquid-light" className="mt-auto self-start" />
                   </div>
                 </article>
               </Reveal>

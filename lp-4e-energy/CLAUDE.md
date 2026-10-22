@@ -53,7 +53,7 @@ src/
 │   ├── motion/     Reveal (CSS) + RevealObserver (1 IntersectionObserver), Counter, SmoothScroll
 │   ├── tracking/   TrackingProvider (GTM), TrackingEvents, UTMCapture, Collector
 │   ├── seo/        JsonLd (Organization+LocalBusiness, Service, FAQPage)
-│   └── ui/         Button, WhatsAppButton, Eyebrow, SectionHeading/Highlight, Accordion, GlowCard, Seal, icons
+│   └── ui/         Button (liquid glass), WhatsAppButton, GlassFilter, Eyebrow, SectionHeading/Highlight, Accordion, GlowCard, Seal, icons
 ├── lib/
 │   ├── site.ts     ÚNICO lugar com contatos/dados legais (placeholders marcados) + NAV_ITEMS + anchorHref()
 │   ├── content/home.ts   TODA a copy (hero, públicos, etapas, renda, gestão, segurança, sobre, diagnóstico, soluções, FAQ)
@@ -78,7 +78,7 @@ public/brand (logo recortado do JPEG) · public/dashboard (UI do painel) · publ
 | Ciano | `#28C7F2` · hover `#5AD5F5` · para TEXTO sobre fundo claro `cyan-dark #0E7FA3` |
 | Claros | branco · gelo `#EEF4FB` · gelo escuro `#DCE6F3` · texto `ink #0B1A3A` / `ink-soft #4F6283` · sobre navy `mist #A9B8D3` |
 | Fontes | Montserrat 700 (display, `.text-display`) · Inter (corpo), locais |
-| Botões | pílula; ciano com texto navy (nunca branco sobre ciano); WhatsApp verde `#25D366` no flutuante e na barra mobile |
+| Botões | pílula "liquid glass" (`Button` variantes `liquid` ciano, `liquid-clear`, `liquid-light`; CSS `.btn-liquid` + `GlassFilter` no layout); WhatsApp verde `#25D366` no flutuante e na barra mobile; submit do formulário = ciano sólido com o aro |
 
 Destaque em títulos: `<Highlight>` (ciano no navy; sublinhado ciano no claro). Utilitários: `.container-site`, `.section-y`, `.cv-auto`, `.tick-grid`, `.navy-glow`, `.telemetry-line`, `.enter` (hero, só transform).
 

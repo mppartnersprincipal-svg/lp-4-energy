@@ -107,7 +107,8 @@ Destaque em títulos: `<Highlight>` em ciano sobre navy; sobre fundo claro, subl
 | `OtherSolutions` | Três cards com cabeçalho em foto (ou grade de telemetria para BESS) e ícone próprio |
 | `FinalCta` | Foto da usina à direita com gradiente navy, anel decorativo no celular |
 | `Accordion` (FAQ) | Botões acessíveis com ícone + → ×, dispara `faq_open` |
-| `WhatsAppButton` / `MobileCtaBar` / `WhatsAppFloat` | Pílula ciano (CTA da marca) e verde do WhatsApp no flutuante e na barra do celular |
+| `Button` "liquid glass" (`liquid`, `liquid-clear`, `liquid-light`) | Pílula translúcida com aro de luz por sombras internas (`::before`) e fundo distorcido pelo filtro SVG `#container-glass` (`::after`, `backdrop-filter: url()`; fallback blur + saturação fora do Chromium). `liquid` = ciano a 24% com brilho (CTA principal em fundo escuro), `liquid-clear` = neutro (secundário), `liquid-light` = sobre fundo claro com texto navy. Pedido do Pedro em 22/10/2026 |
+| `MobileCtaBar` / `WhatsAppFloat` | Barra do celular com "Diagnóstico" em glass e WhatsApp verde; flutuante verde do WhatsApp |
 
 ---
 
@@ -137,7 +138,7 @@ Destaque em títulos: `<Highlight>` em ciano sobre navy; sobre fundo claro, subl
 - **Hero:** animação CSS pura (`.enter`), conteúdo visível sem JavaScript; nenhum elemento candidato a LCP começa com `opacity: 0`.
 - **Contadores:** easeOutCubic 2s, disparo com 30% do elemento visível.
 - **Linha do tempo:** preenchimento ligado ao scroll via rAF + CSS var (sem re-render).
-- **Botões:** hover scale 1,03 + brilho ciano; active 0,97; transição 180ms.
+- **Botões:** hover scale 1,03 + aro e brilho ciano mais fortes (liquid glass); active 0,97; transição 300ms.
 - **Header:** fundo navy a 85% com `backdrop-filter: blur(12px)` ao rolar (só no header, elemento estático).
 - **Scroll-linked:** `useScrollProgress` (um loop rAF compartilhado, modos `pin` e `pass`) escreve CSS vars (`--e`, `--p`, `--g`, `--py`); nada re-renderiza React no scroll.
 - **Proibido:** partículas, scroll-video (não há vídeo da 4E), `backdrop-filter` em elementos que se movem, animação acima de 60fps.

@@ -42,7 +42,7 @@ export function SecurityBlocks() {
           <p className="max-w-xl text-ink-soft">
             Tem outra pergunta sobre risco, prazo ou regulamentação? Respondemos com as premissas do seu caso.
           </p>
-          <WhatsAppButton ctaId="cta_whatsapp_seguranca" variant="navy" label="Tirar dúvidas no WhatsApp" />
+          <WhatsAppButton ctaId="cta_whatsapp_seguranca" variant="liquid-light" label="Tirar dúvidas no WhatsApp" />
         </Reveal>
       </div>
     </section>

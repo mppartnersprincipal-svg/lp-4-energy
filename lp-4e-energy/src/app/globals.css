@@ -256,6 +256,99 @@ html.lenis body { height: auto; }
     .hero-scroll > .sticky { position: relative; }
   }
 
+  /* Botões "liquid glass": aro de luz por sombras internas (::before) e fundo distorcido pelo
+     filtro SVG #container-glass (::after). Fora do Chromium vale o fallback de blur + saturação. */
+  .btn-liquid {
+    isolation: isolate;
+    background: transparent;
+  }
+  .btn-liquid::before,
+  .btn-liquid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .btn-liquid::before {
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+    box-shadow:
+      0 0 6px rgb(0 0 0 / 0.03),
+      0 2px 6px rgb(0 0 0 / 0.08),
+      inset 3px 3px 0.5px -3.5px rgb(255 255 255 / 0.09),
+      inset -3px -3px 0.5px -3.5px rgb(255 255 255 / 0.85),
+      inset 1px 1px 1px -0.5px rgb(255 255 255 / 0.6),
+      inset -1px -1px 1px -0.5px rgb(255 255 255 / 0.6),
+      inset 0 0 6px 6px rgb(255 255 255 / 0.12),
+      inset 0 0 2px 2px rgb(255 255 255 / 0.06),
+      0 0 12px rgb(0 0 0 / 0.15);
+  }
+  .btn-liquid::after {
+    z-index: -1;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    backdrop-filter: blur(10px) saturate(140%);
+    backdrop-filter: url("#container-glass");
+  }
+  .btn-liquid--cyan {
+    color: #ffffff;
+    background: rgb(40 199 242 / 0.24);
+  }
+  .btn-liquid--cyan::before {
+    box-shadow:
+      0 0 6px rgb(0 0 0 / 0.03),
+      0 2px 6px rgb(0 0 0 / 0.08),
+      inset 3px 3px 0.5px -3.5px rgb(255 255 255 / 0.09),
+      inset -3px -3px 0.5px -3.5px rgb(255 255 255 / 0.85),
+      inset 1px 1px 1px -0.5px rgb(255 255 255 / 0.6),
+      inset -1px -1px 1px -0.5px rgb(255 255 255 / 0.6),
+      inset 0 0 6px 6px rgb(255 255 255 / 0.12),
+      inset 0 0 2px 2px rgb(255 255 255 / 0.06),
+      0 10px 30px -10px rgb(40 199 242 / 0.6);
+  }
+  .btn-liquid--cyan:hover {
+    background: rgb(40 199 242 / 0.36);
+  }
+  .btn-liquid--cyan:hover::before {
+    box-shadow:
+      0 0 6px rgb(0 0 0 / 0.03),
+      0 2px 6px rgb(0 0 0 / 0.08),
+      inset 3px 3px 0.5px -3.5px rgb(255 255 255 / 0.15),
+      inset -3px -3px 0.5px -3.5px rgb(255 255 255 / 0.95),
+      inset 1px 1px 1px -0.5px rgb(255 255 255 / 0.7),
+      inset -1px -1px 1px -0.5px rgb(255 255 255 / 0.7),
+      inset 0 0 6px 6px rgb(255 255 255 / 0.16),
+      inset 0 0 2px 2px rgb(255 255 255 / 0.08),
+      0 14px 40px -10px rgb(40 199 242 / 0.8);
+  }
+  .btn-liquid--clear {
+    color: #ffffff;
+    background: rgb(255 255 255 / 0.06);
+  }
+  .btn-liquid--clear:hover {
+    background: rgb(255 255 255 / 0.12);
+  }
+  .btn-liquid--light {
+    color: var(--cor-primaria);
+    background: rgb(6 24 62 / 0.08);
+  }
+  .btn-liquid--light::before {
+    box-shadow:
+      0 0 6px rgb(0 0 0 / 0.03),
+      0 2px 6px rgb(0 0 0 / 0.08),
+      inset 3px 3px 0.5px -3px rgb(0 0 0 / 0.9),
+      inset -3px -3px 0.5px -3px rgb(0 0 0 / 0.85),
+      inset 1px 1px 1px -0.5px rgb(0 0 0 / 0.6),
+      inset -1px -1px 1px -0.5px rgb(0 0 0 / 0.6),
+      inset 0 0 6px 6px rgb(0 0 0 / 0.12),
+      inset 0 0 2px 2px rgb(0 0 0 / 0.06),
+      0 0 12px rgb(255 255 255 / 0.15);
+  }
+  .btn-liquid--light:hover {
+    background: rgb(6 24 62 / 0.14);
+  }
+
   /* Marquee: faixa infinita */
   .marquee-track {
     animation: var(--animate-marquee);

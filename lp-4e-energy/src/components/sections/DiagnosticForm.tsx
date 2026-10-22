@@ -220,10 +220,10 @@ export function DiagnosticForm() {
 
       <button
         type="submit"
-        className="group mt-2 inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-cyan px-8 text-base font-semibold text-navy-deep transition-[transform,box-shadow,background-color] duration-300 hover:scale-[1.02] hover:bg-cyan-light hover:shadow-cyan active:scale-[0.98] motion-reduce:hover:scale-100"
+        className="btn-liquid btn-liquid--light group relative mt-2 inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-cyan px-8 text-base font-semibold text-navy-deep transition-[transform,box-shadow,background-color] duration-300 hover:scale-[1.02] hover:bg-cyan-light active:scale-[0.98] motion-reduce:hover:scale-100"
       >
-        Continuar no WhatsApp
-        <IconSeta className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
+        <span className="relative z-10">Continuar no WhatsApp</span>
+        <IconSeta className="relative z-10 size-5 transition-transform duration-300 group-hover:translate-x-1" />
       </button>
       <p className="text-xs leading-relaxed text-ink-soft">
         Seus dados seguem apenas na mensagem do WhatsApp para a equipe da 4E Energy. Nada fica armazenado neste site.

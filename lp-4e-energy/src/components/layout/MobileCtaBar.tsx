@@ -26,7 +26,7 @@ export function MobileCtaBar() {
           href={anchorHref(pathname, DIAGNOSTIC_ANCHOR)}
           data-track="click_cta"
           data-cta-id="cta_diagnostico_barra_mobile"
-          className="flex min-h-12 items-center justify-center rounded-full border border-white/25 text-[15px] font-semibold text-white active:scale-[0.98]"
+          className="btn-liquid btn-liquid--clear relative flex min-h-12 items-center justify-center rounded-full text-[15px] font-semibold active:scale-[0.98]"
         >
           Diagnóstico
         </a>

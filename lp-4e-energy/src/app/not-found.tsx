@@ -23,7 +23,7 @@ export default function NotFound() {
           <Button href="/" icon={<IconSeta className="size-4 rotate-180" />} iconPosition="start">
             Voltar ao início
           </Button>
-          <WhatsAppButton ctaId="cta_whatsapp_404" variant="outline-light" />
+          <WhatsAppButton ctaId="cta_whatsapp_404" variant="liquid-clear" />
         </div>
       </div>
     </section>

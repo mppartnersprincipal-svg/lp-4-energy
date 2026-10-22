@@ -22,7 +22,7 @@ export function WhatsAppButton({
   ctaId,
   message = DEFAULT_WHATSAPP_MESSAGE,
   label = "Falar com um especialista",
-  variant = "cyan",
+  variant = "liquid",
   size = "md",
   className,
 }: WhatsAppButtonProps) {

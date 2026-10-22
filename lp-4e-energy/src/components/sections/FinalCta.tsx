@@ -27,7 +27,7 @@ export function FinalCta() {
           <p className="text-lg leading-relaxed text-mist">{FINAL_CTA.description}</p>
           <div className="flex flex-col gap-3 pt-2 sm:flex-row">
             <WhatsAppButton ctaId="cta_whatsapp_final" size="lg" />
-            <Button href="#diagnostico" variant="outline-light" size="lg" icon={<IconSeta className="size-5" />} data-track="click_cta" data-cta-id="cta_diagnostico_final">
+            <Button href="#diagnostico" variant="liquid-clear" size="lg" icon={<IconSeta className="size-5" />} data-track="click_cta" data-cta-id="cta_diagnostico_final">
               Fazer o diagnóstico
             </Button>
           </div>

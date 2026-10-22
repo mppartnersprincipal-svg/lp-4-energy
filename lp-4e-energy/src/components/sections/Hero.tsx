@@ -148,7 +148,7 @@ export function Hero() {
                 <WhatsAppButton ctaId="cta_whatsapp_hero" label={HERO.primaryCta} size="lg" />
                 <Button
                   href="#modelo"
-                  variant="outline-light"
+                  variant="liquid-clear"
                   size="lg"
                   icon={<IconSetaBaixo className="size-5" />}
                   data-track="click_cta"

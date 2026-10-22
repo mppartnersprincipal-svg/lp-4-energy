@@ -8,6 +8,7 @@ import { RevealObserver } from "@/components/motion/RevealObserver";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { buildOrganizationSchema, JsonLd } from "@/components/seo/JsonLd";
 import { GtmNoScript, TrackingProvider } from "@/components/tracking/TrackingProvider";
+import { GlassFilter } from "@/components/ui/GlassFilter";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Pular para o conteúdo
         </a>
         <JsonLd data={buildOrganizationSchema()} />
+        <GlassFilter />
         <TrackingProvider>
           <SmoothScroll />
           <RevealObserver />

@@ -116,7 +116,7 @@ export function RevenueModel() {
                 <h3 className="text-display text-xl font-bold text-ink sm:text-2xl">{REVENUE.projection.title}</h3>
                 <p className="leading-relaxed text-ink-soft">{REVENUE.projection.description}</p>
               </div>
-              <WhatsAppButton ctaId="cta_whatsapp_rentabilidade" label="Pedir uma projeção" variant="navy" className="mt-auto self-start" />
+              <WhatsAppButton ctaId="cta_whatsapp_rentabilidade" label="Pedir uma projeção" variant="liquid-light" className="mt-auto self-start" />
             </div>
           </Reveal>
         </div>
