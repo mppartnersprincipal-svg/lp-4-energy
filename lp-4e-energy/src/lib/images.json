@@ -1,0 +1,47 @@
+{
+  "tecnico-manutencao": {
+    "width": 2000,
+    "height": 1119,
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwAgCdASoQAAkAA4BaJZACdDBKyIqMYxYUYzDYAPsXp2MjdzutRUuUujwnBtbKadef4VIMPq9/hK4NqqrVo+2gBueqET9alE8c843ZlFG7Sif22JzJmEeO8pqiFQ7d6LVHOw46GerwAA=="
+  },
+  "telhado-empresa": {
+    "width": 2000,
+    "height": 1353,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoQAAsAA4BaJZgCdEf/gedjdNmJyAAA/tYpwpfTJyf5fMdUIuZ192g+K1/UV8RmbR7t2v+cUJJ23ndFtMh3qGe5lPBSBjQA"
+  },
+  "usina-aerea-grama": {
+    "width": 2000,
+    "height": 1125,
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAkAA4BaJbACdADp9TvYzAAA/qmwr7ll6zz3UdmeiGkCrRAojrjIOUd65O4OZvah5Ts61EFj6STg6tAAAA=="
+  },
+  "usina-aerea": {
+    "width": 2000,
+    "height": 1499,
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAwAA4BaJagCdADc7yBk0pMAAP7Qxs+ubLtNr0nf09dA+hyYOREjZuOYBAMS/wsL5DkWl0EV+z+AAAA="
+  },
+  "usina-campo": {
+    "width": 2000,
+    "height": 1500,
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAwAA4BaJQBOgCHcOInyAAD+9PTY6KqbXQ4sxe8VsgeuVuN+U4zeTUzZ7dAoR3ck7FIEjkLAAA=="
+  },
+  "usina-entardecer": {
+    "width": 2000,
+    "height": 1333,
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAsAA4BaJZgCdAEPR0Wxy0AA/tNyp93vyYD+DDzfB19/P0xFws6U/QC1ox381Mn7WR7mPIZ2OwFBfAAAAA=="
+  },
+  "usina-fileiras": {
+    "width": 2000,
+    "height": 1331,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABwAgCdASoQAAsAA4BaJbACdFQAA1LHnPn8FAwAAP6DTYY3u0jUX9IK8uTm+MOsU4xEd7fU9I+0xeg+ASvYJ5+dOYsY01sitdXL/0qhdvqYSnuk/sa39cA1tRnUAAAA"
+  },
+  "usina-solo-nuvens": {
+    "width": 2000,
+    "height": 1331,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJaACdAC2iAHf9AD+zgIDJaRLIcosOXMmCncD7IMO0nMEYnPG0cYTzFnQ7IG6CuqbevxEeshu1fwrJpxcndKG+O8iuZc8Mh3GAA=="
+  },
+  "usina-verde": {
+    "width": 2000,
+    "height": 1500,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAwAA4BaJbACdAEe2NdAZwcoAP3uDTgDx5TTBA06UGLPLO4DXDXdJAPMg9sAVF0miv7VuJH3c6oGB/TdFiI/+Q8t17oAn/YYbtwsmgAAAA=="
+  }
+}

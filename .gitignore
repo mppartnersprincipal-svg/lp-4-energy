@@ -1,0 +1,11 @@
+# Raiz do projeto: materiais brutos do cliente nunca entram no git (o briefing contém credenciais).
+# Padrões ancorados na raiz (com "/") para não afetar as imagens do app em lp-4e-energy/.
+/*.pdf
+/*.docx
+/*.jpeg
+/*.jpg
+/*.png
+/Logos/
+/Fotos*/
+/Briefing*/
+/WhatsApp*
