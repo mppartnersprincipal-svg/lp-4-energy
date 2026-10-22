@@ -18,9 +18,15 @@ A 4E Energy constrói usinas fotovoltaicas para investidores e administra, em no
 
 Investidores (pessoa física ou empresa) que buscam renda recorrente, previsibilidade e segurança operacional, principalmente em Goiás. Não atende quem quer instalar placas para reduzir a própria conta de luz (integração residencial).
 
-## Regulamentação
+## O que é uma usina fotovoltaica gerida
 
-Geração distribuída regulada pela ANEEL, com marco legal na Lei nº 14.300/2022. Projeções de geração e de receita dependem das condições de cada projeto e não constituem garantia de rentabilidade.
+Uma usina solar de solo construída em nome do investidor e administrada por uma empresa especializada. A 4E Energy faz o estudo de viabilidade, constrói e conecta a usina à distribuidora, capta empresas e residências para a energia por assinatura e assume operação, manutenção mensal e relatórios. Os consumidores da carteira recebem os créditos de energia com até 30% de desconto e pagam uma mensalidade; essa receita, descontados os custos de gestão, é a renda recorrente do investidor.
+
+## Regulamentação e fontes
+
+- Geração distribuída regulada pela ANEEL: https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida
+- Marco legal: Lei nº 14.300/2022: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm
+- Projeções de geração e de receita dependem das condições de cada projeto e não constituem garantia de rentabilidade.
 
 ## Contato
 
@@ -28,3 +34,5 @@ Geração distribuída regulada pela ANEEL, com marco legal na Lei nº 14.300/20
 - WhatsApp: [PREENCHER]
 - Instagram: https://www.instagram.com/4eenergy/
 - Região: Goiás, Brasil
+- Responsável técnico-comercial: Marcos Lamounier, diretor
+- Conteúdo revisado em: 2026-10-22

@@ -12,14 +12,14 @@ import { OtherSolutions } from "@/components/sections/OtherSolutions";
 import { RevenueModel } from "@/components/sections/RevenueModel";
 import { SecurityBlocks } from "@/components/sections/SecurityBlocks";
 import { Stats } from "@/components/sections/Stats";
-import { buildServiceSchema, JsonLd } from "@/components/seo/JsonLd";
+import { buildPersonSchema, buildServiceSchema, buildWebPageSchema, JsonLd } from "@/components/seo/JsonLd";
 import { FAQ } from "@/lib/content/home";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
-  title: "Usina Solar para Investidores em Goiás | Renda Recorrente | 4E Energy",
+  title: "Usina Solar para Investidores em Goiás | 4E Energy",
   description:
-    "A 4E Energy constrói sua usina fotovoltaica, capta e administra a carteira de consumidores e cuida da operação. Renda recorrente com um ativo real, sem você precisar operar nada.",
+    "Usina fotovoltaica gerida em Goiás: a 4E Energy constrói, capta a carteira de consumidores e opera. Renda recorrente com um ativo real, sem você operar nada.",
   path: "/",
   isAbsoluteTitle: true,
 });
@@ -27,7 +27,9 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={buildWebPageSchema()} />
       <JsonLd data={buildServiceSchema()} />
+      <JsonLd data={buildPersonSchema()} />
       <Hero />
       <Marquee />
       <Stats />

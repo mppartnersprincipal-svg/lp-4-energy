@@ -11,8 +11,10 @@ export function Stats() {
         <Reveal>
           <Eyebrow onDark>{STATS.eyebrow}</Eyebrow>
           <h2 id="numeros-title" className="text-display mt-4 max-w-[20ch] text-[clamp(2rem,1.2rem+3.4vw,4rem)] leading-[1.02] font-bold text-balance text-white">
-            {STATS.title} <span className="text-mist">{STATS.titleMuted}</span>
+            {STATS.title}
           </h2>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-pretty text-white/90">{STATS.definition}</p>
+          <p className="text-display mt-4 text-xl font-bold text-mist">{STATS.titleMuted}</p>
         </Reveal>
 
         <dl className="mt-14 grid grid-cols-2 border-t border-white/10 lg:grid-cols-4">

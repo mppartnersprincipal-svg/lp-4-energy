@@ -25,6 +25,22 @@ import type { PhotoName } from "@/lib/images";
 
 type Icon = ComponentType<IconProps>;
 
+/** Data da última revisão do conteúdo (aparece no rodapé e no schema WebPage). Atualizar a cada mudança de copy. */
+export const CONTENT_UPDATED_AT = "2026-10-22";
+export const CONTENT_PUBLISHED_AT = "2026-10-22";
+
+/** Fontes oficiais citadas na página (links externos com rel="noopener") */
+export const SOURCES = {
+  lei14300: {
+    label: "Lei nº 14.300/2022 (Marco Legal da Geração Distribuída)",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm",
+  },
+  aneel: {
+    label: "ANEEL: geração distribuída",
+    url: "https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida",
+  },
+} as const;
+
 export const HERO = {
   eyebrow: "Usinas fotovoltaicas para investidores · Goiás",
   title: "Sua usina solar gerando renda recorrente.",
@@ -79,9 +95,12 @@ export interface Stat {
 }
 
 export const STATS = {
-  eyebrow: "Por que a 4E",
-  title: "Investir em energia não é aposta.",
-  titleMuted: "É operação bem feita, todos os dias.",
+  eyebrow: "O que é uma usina gerida",
+  title: "O que é uma usina fotovoltaica gerida para investidores?",
+  titleMuted: "Investir em energia não é aposta. É operação bem feita, todos os dias.",
+  // Bloco de definição, autocontido (GEO): responde à pergunta do título sem depender do resto da página
+  definition:
+    "Uma usina fotovoltaica gerida para investidores é uma usina solar de solo construída em nome do investidor e administrada por uma empresa especializada. A 4E Energy faz o estudo de viabilidade, constrói e conecta a usina à distribuidora, capta empresas e residências para a energia por assinatura e assume a operação, a manutenção mensal e os relatórios. Os consumidores da carteira recebem os créditos de energia com até 30% de desconto na conta de luz e pagam uma mensalidade; essa receita, descontados os custos de gestão, é a renda recorrente do investidor. O modelo segue o marco legal da geração distribuída, a Lei nº 14.300/2022, e é regulado pela ANEEL. Em Goiás, a 4E Energy atua desde 2022 e mantém mais de 30 usinas sob gestão.",
   items: [
     { value: 30, prefix: "+", label: "usinas sob gestão", detail: "monitoradas e mantidas pela 4E" },
     { value: null, text: "2022", label: "no mercado de energia", detail: "projetos e parcerias desde o início" },
@@ -122,8 +141,8 @@ export interface Step {
 
 export const HOW_IT_WORKS = {
   eyebrow: "Como funciona",
-  title: "Do estudo de viabilidade à renda recorrente,",
-  titleHighlight: "em quatro etapas.",
+  title: "Como funciona uma usina gerida para investidores?",
+  titleHighlight: "Em quatro etapas.",
   description:
     "Uma usina fotovoltaica gerida para investidores funciona assim: a 4E Energy executa cada etapa e você acompanha o resultado.",
   steps: [
@@ -174,8 +193,8 @@ export interface FlowNode {
 
 export const REVENUE = {
   eyebrow: "De onde vem a renda",
-  title: "Um modelo simples,",
-  titleHighlight: "explicado sem letras miúdas.",
+  title: "De onde vem a renda recorrente do investidor?",
+  titleHighlight: "Um modelo simples, sem letras miúdas.",
   description:
     "A renda do investidor vem da carteira de consumidores da usina. Veja o caminho do crédito de energia até a sua receita.",
   flow: [
@@ -204,8 +223,8 @@ export interface ManagementItem {
 
 export const MANAGEMENT = {
   eyebrow: "O que a 4E assume por você",
-  title: "Toda a operação,",
-  titleHighlight: "do painel ao consumidor.",
+  title: "O que a 4E Energy faz pelo investidor?",
+  titleHighlight: "Toda a operação, do painel ao consumidor.",
   description: "A 4E Energy assume a gestão técnica e comercial da usina. Para o investidor, o acompanhamento é feito pelos relatórios.",
   closing: "Sem equipe própria. Sem folha de pagamento. Sem operação no seu dia a dia.",
   items: [
@@ -223,12 +242,14 @@ export interface SecurityItem {
   question: string;
   answer: string;
   proof: string;
+  /** Fonte oficial ligada à prova (link externo) */
+  source?: { label: string; url: string };
 }
 
 export const SECURITY = {
   eyebrow: "Segurança do investimento",
-  title: "As três perguntas que todo investidor faz.",
-  titleHighlight: "E as nossas respostas.",
+  title: "É seguro investir em uma usina solar gerida?",
+  titleHighlight: "As três perguntas que todo investidor faz, e as nossas respostas.",
   seal: "ESTUDO DE VIABILIDADE • PROJEÇÃO CONSERVADORA • LEI Nº 14.300/2022 • ",
   items: [
     {
@@ -247,15 +268,16 @@ export const SECURITY = {
       question: "E a regulamentação do setor?",
       answer:
         "A geração distribuída tem marco legal próprio, a Lei nº 14.300/2022, que define regras e prazos de transição. Explicamos o cenário regulatório e o histórico das discussões para que a decisão seja tomada com planejamento e informação.",
-      proof: "Setor regulado pela ANEEL.",
+      proof: "Setor regulado pela ANEEL, com marco legal na Lei nº 14.300/2022.",
+      source: SOURCES.lei14300,
     },
   ] satisfies SecurityItem[],
 } as const;
 
 export const ABOUT = {
   eyebrow: "Quem é a 4E Energy",
-  title: "Engenharia, gestão e tecnologia",
-  titleHighlight: "desde 2022.",
+  title: "Quem é a 4E Energy?",
+  titleHighlight: "Engenharia, gestão e tecnologia desde 2022.",
   paragraphs: [
     "A 4E Energy nasceu em 2022, com projetos e parcerias ao lado de HES HUB, SEBRAE, Xper e Ubantec. Os primeiros estudos foram voltados à gestão de cargas e ao armazenamento de energia em baterias.",
     "A participação em eventos e palestras pelo Brasil aprofundou o conhecimento sobre os desafios da infraestrutura elétrica nacional e levou a empresa a se especializar na gestão de usinas fotovoltaicas, sistemas híbridos e BESS.",
@@ -286,8 +308,8 @@ export interface GalleryItem {
 
 export const GALLERY = {
   eyebrow: "Imagens ilustrativas",
-  title: "Usinas de solo como as que operamos.",
-  titleMuted: "Fotos reais das usinas sob gestão em breve nesta página.",
+  title: "Como é uma usina de solo como as que operamos",
+  titleMuted: "Fotos reais das usinas sob gestão entram nesta página assim que forem liberadas pelo cliente.",
   items: [
     { photo: "usina-campo", alt: "Usina de solo com módulos em campo verde (imagem ilustrativa)", tag: "Usina de solo", title: "Módulos em estrutura fixa" },
     { photo: "usina-aerea-grama", alt: "Vista aérea de usina de solo (imagem ilustrativa)", tag: "Vista aérea", title: "Fileiras alinhadas ao sol" },

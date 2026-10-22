@@ -31,9 +31,9 @@ const inter = localFont({
   preload: false,
 });
 
-const DEFAULT_TITLE = "Usina Solar para Investidores em Goiás | Renda Recorrente | 4E Energy";
+const DEFAULT_TITLE = "Usina Solar para Investidores em Goiás | 4E Energy";
 const DEFAULT_DESCRIPTION =
-  "A 4E Energy constrói sua usina fotovoltaica, capta e administra a carteira de consumidores e cuida da operação. Renda recorrente com um ativo real, sem você precisar operar nada.";
+  "Usina fotovoltaica gerida em Goiás: a 4E Energy constrói, capta a carteira de consumidores e opera. Renda recorrente com um ativo real, sem você operar nada.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),

@@ -31,7 +31,22 @@ export function SecurityBlocks() {
                 <p className="leading-relaxed text-ink-soft">{item.answer}</p>
                 <p className="mt-auto flex items-start gap-2 border-t border-ice-dark pt-5 text-sm font-semibold text-cyan-dark">
                   <IconEscudo className="mt-0.5 size-4 shrink-0" />
-                  {item.proof}
+                  <span>
+                    {item.proof}
+                    {item.source && (
+                      <>
+                        {" "}
+                        <a
+                          href={item.source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-ink-soft underline decoration-cyan/60 underline-offset-4 hover:text-ink"
+                        >
+                          Ver a lei
+                        </a>
+                      </>
+                    )}
+                  </span>
                 </p>
               </article>
             </Reveal>

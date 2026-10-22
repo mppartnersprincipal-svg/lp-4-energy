@@ -1,12 +1,17 @@
 import Link from "next/link";
 import { Logo, RingMark } from "@/components/layout/Logo";
 import { IconMail, IconPino, IconRelogio, InstagramIcon, WhatsAppIcon } from "@/components/ui/icons";
-import { LEGAL_NOTICE } from "@/lib/content/home";
+import { CONTENT_UPDATED_AT, LEGAL_NOTICE } from "@/lib/content/home";
 import { NAV_ITEMS, SITE } from "@/lib/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 const SOCIAL_LINK =
   "grid size-11 place-items-center rounded-full border border-white/15 text-white transition-[transform,border-color,color] duration-300 hover:-translate-y-0.5 hover:border-cyan hover:text-cyan";
+
+function formatDate(iso: string): string {
+  const [year, month, day] = iso.split("-");
+  return `${day}/${month}/${year}`;
+}
 
 // Cache Components: valores do relógio precisam ser cacheados no prerender
 async function getCopyrightYear(): Promise<number> {
@@ -53,7 +58,7 @@ export async function Footer() {
         </div>
 
         <nav aria-label="Seções da página">
-          <h2 className="mb-5 text-xs font-semibold tracking-[0.18em] text-cyan uppercase">Navegação</h2>
+          <p className="mb-5 text-xs font-semibold tracking-[0.18em] text-cyan uppercase">Navegação</p>
           <ul className="flex flex-col gap-3">
             {NAV_ITEMS.map((item) => (
               <li key={item.sectionId}>
@@ -71,7 +76,7 @@ export async function Footer() {
         </nav>
 
         <div>
-          <h2 className="mb-5 text-xs font-semibold tracking-[0.18em] text-cyan uppercase">Atendimento</h2>
+          <p className="mb-5 text-xs font-semibold tracking-[0.18em] text-cyan uppercase">Atendimento</p>
           <ul className="flex flex-col gap-4">
             <li>
               <a
@@ -112,7 +117,10 @@ export async function Footer() {
           <p className="max-w-4xl text-mist/80">{LEGAL_NOTICE}</p>
           <p>
             © {year} {SITE.legalName}
-            {SITE.cnpj ? ` · CNPJ ${SITE.cnpj}` : ""} · Energia Inteligente · Economia · Sustentabilidade
+            {SITE.cnpj ? ` · CNPJ ${SITE.cnpj}` : ""} · Energia Inteligente · Economia · Sustentabilidade ·{" "}
+            <span>
+              Conteúdo revisado em <time dateTime={CONTENT_UPDATED_AT}>{formatDate(CONTENT_UPDATED_AT)}</time>
+            </span>
           </p>
         </div>
       </div>

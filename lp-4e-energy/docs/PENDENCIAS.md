@@ -22,6 +22,8 @@ Tudo o que a LP mostra sem confirmação do cliente está marcado aqui. Nada aba
 | Prazo médio de construção e conexão | FAQ | resposta genérica |
 | Substituição de consumidor (prazo) e saída do investimento (condições) | FAQ | respostas genéricas |
 | Depoimento de investidor | sem seção na v1 | só com material real |
+| Presença de marca fora do site (GEO) | Instagram só | Menções em YouTube, LinkedIn e Reddit pesam mais que backlinks na citação por IA; perfil no LinkedIn da empresa e do Marcos + `sameAs` no schema quando existirem |
+| Google Business Profile | – | criar/confirmar o perfil (entidade local para Goiás) e adicionar o link em `sameAs` |
 | Revisão técnico-comercial do Marcos | seções `rentabilidade`, `seguranca` e FAQ | obrigatória antes de publicar |
 
 ## Com o Pedro (configuração)

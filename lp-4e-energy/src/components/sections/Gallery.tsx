@@ -50,8 +50,9 @@ export function Gallery() {
           <div>
             <Eyebrow onDark>{GALLERY.eyebrow}</Eyebrow>
             <h2 id="usinas-title" className="text-display mt-4 max-w-[18ch] text-[clamp(2rem,1.2rem+3.4vw,4rem)] leading-[1.02] font-bold text-balance text-white">
-              {GALLERY.title} <span className="text-mist">{GALLERY.titleMuted}</span>
+              {GALLERY.title}
             </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-mist">{GALLERY.titleMuted}</p>
           </div>
         </Reveal>
 
