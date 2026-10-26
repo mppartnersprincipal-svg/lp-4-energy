@@ -26,7 +26,7 @@ import type { PhotoName } from "@/lib/images";
 type Icon = ComponentType<IconProps>;
 
 /** Data da última revisão do conteúdo (aparece no rodapé e no schema WebPage). Atualizar a cada mudança de copy. */
-export const CONTENT_UPDATED_AT = "2026-10-22";
+export const CONTENT_UPDATED_AT = "2026-10-26";
 export const CONTENT_PUBLISHED_AT = "2026-10-22";
 
 /** Fontes oficiais citadas na página (links externos com rel="noopener") */
@@ -261,7 +261,7 @@ export const SECURITY = {
     {
       question: "Qual é o retorno e em quanto tempo?",
       answer:
-        "Cada projeto tem a própria projeção, apresentada em reunião com todas as premissas: investimento, geração estimada, tarifa e custos de gestão. Depois, você acompanha os resultados reais com relatórios periódicos.",
+        "Cada projeto possui uma projeção de retorno personalizada, que pode chegar a até 3,6% ao mês, com um projeto de caráter vitalício. Em reunião, apresentamos todas as premissas do investimento, incluindo valor investido, geração estimada, tarifa de energia e custos de gestão. Após a implantação, você acompanha o desempenho e os resultados reais por meio de relatórios periódicos, com transparência e acompanhamento técnico especializado.",
       proof: "Apresentação personalizada e projeção conservadora.",
     },
     {
