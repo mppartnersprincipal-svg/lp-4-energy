@@ -9,9 +9,10 @@ export interface NavItem {
   sectionId: string;
 }
 
-// PLACEHOLDER: WhatsApp comercial da 4E (DDI + DDD + número, só dígitos). Enquanto começar com 5500 é fictício.
+// WhatsApp comercial da 4E, (62) 9.9607-1233, confirmado pelo Pedro em 26/10/2026 (DDI + DDD + número, só dígitos).
+// Um número começando com 5500 é tratado como fictício (esconde o telefone do schema).
 const PLACEHOLDER_PHONE_PREFIX = "5500";
-const DEFAULT_WHATSAPP = "5500000000000";
+const DEFAULT_WHATSAPP = "5562996071233";
 
 export const SITE = {
   name: "4E Energy",
