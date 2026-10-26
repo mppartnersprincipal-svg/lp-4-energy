@@ -62,7 +62,7 @@ src/
 │   ├── tracking.ts, whatsapp.ts, collector.ts, metadata.ts, useMediaQuery.ts, useScrolledPast.ts
 │   └── fonts/ (../fonts) montserrat 700 + inter variável, locais via next/font/local
 └── server/analytics/   lógica do painel (db, auth, payload, classify, period, report, ga4, google-ads) + tests/
-public/brand (logo recortado do JPEG) · public/dashboard (UI do painel) · public/llms.txt
+public/brand (logo recortado do JPEG) · public/dashboard (UI do painel) · app/llms.txt/route.ts (gerado da copy)
 ```
 
 **Seções (`id`, na ordem):** `topo`, `numeros`, `para-quem`, `modelo`, `rentabilidade`, `investimento`, `gestao`, `seguranca`, `sobre`, `usinas`, `diagnostico`, `outras-solucoes`, `perguntas-frequentes`, `cta-final`. Toda `<section>` nova precisa de `id` (funil do painel + `section_view`) e da classe `cv-auto` se ficar abaixo da dobra.
@@ -90,19 +90,22 @@ Destaque em títulos: `<Highlight>` (ciano no navy; sublinhado ciano no claro). 
 - `WhatsAppButton` renderiza o `href` sem UTMs e, no clique, troca pela URL com a origem (`buildWhatsAppUrlWithOrigin`).
 - `DiagnosticForm` (`lib/lead.ts`): nome, WhatsApp, cidade, faixa de capital, perfil (PF/empresa), terreno (opcional). Dispara `form_complete` com `form_id`, `capital_range`, `investor_type` e abre `wa.me` com a mensagem pronta + origem. **Nunca** colocar nome, telefone ou cidade no dataLayer (teste em `tracking.test.ts` e no `scripts/qa.mjs`).
 - Automáticos: `scroll_25/50/75/100`, `section_view` (toda `main section[id]`), `faq_open`.
-- GTM só carrega com `NEXT_PUBLIC_GTM_ID` válido. GA4, Google Ads e Meta Pixel ficam DENTRO do GTM (contêiner a gerar em `gtm/`). Conversão do Ads em `click_whatsapp` e `form_complete`.
+- GTM só carrega com `NEXT_PUBLIC_GTM_ID` válido, em `strategy="lazyOnload"` (exceção ao padrão `afterInteractive` da agência: em produção o gtm.js + gtag rodavam antes da primeira pintura e o LCP mobile ia a 6 a 8 s). Eventos anteriores ficam na fila do `dataLayer`; só visitas que saem em menos de ~1 a 2 s deixam de contar. GA4, Google Ads e Meta Pixel ficam DENTRO do GTM (contêiner a gerar em `gtm/`). Conversão do Ads em `click_whatsapp` e `form_complete`.
 - Painel `/dashboard` (`DASHBOARD.md`): coletor anônimo `lib/collector.ts`, rotas `app/api/*`, banco Supabase `energy4e_*`.
 
 ---
 
-## SEO e GEO (auditado com as skills `claude-seo:seo-page` e `claude-seo:seo-geo` em 22/10/2026)
+## SEO e GEO (auditado com as skills `claude-seo:seo-page` e `claude-seo:seo-geo` em 22/10/2026; revisado em 26/10/2026)
 
 - Title ≤ 60 e description ≤ 160 (`layout.tsx` e `page.tsx`); um H1; H2 em forma de pergunta nas seções principais; frases secundárias fora dos H2 (em `<p>`); rodapé sem H2.
 - Bloco de definição citável ("O que é uma usina fotovoltaica gerida para investidores?") logo depois do marquee, em `STATS.definition`: autocontido, ~130 palavras, no primeiro terço da página. Manter atualizado com os números do cliente.
 - Fontes oficiais com link (`SOURCES` em `lib/content/home.ts`): Lei nº 14.300/2022 (planalto) e ANEEL, usadas na seção de segurança, no FAQ, no `llms.txt` e no schema `WebPage.citation`.
 - Datas: `CONTENT_PUBLISHED_AT` e `CONTENT_UPDATED_AT` em `lib/content/home.ts` aparecem no rodapé (`<time>`) e no schema `WebPage`. **Atualizar `CONTENT_UPDATED_AT` sempre que a copy mudar** (recência pesa na citação por IA).
 - Schemas (JSON-LD): Organization+LocalBusiness (com `founder`), WebPage (datas, `citation`, `speakable`, `reviewedBy`), Service (com `hasOfferCatalog`), Person (Marcos Lamounier), FAQPage. `telephone`/`contactPoint`/`address` só entram quando os dados reais chegarem (`lib/site.ts`).
-- `robots.ts` libera os crawlers que decidem citação (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot, Bingbot) e os de treino (GPTBot, ClaudeBot, Google-Extended); bloqueia `/dashboard` e `/api/`. `llms.txt` existe por completude (o Google ignora).
+- `robots.ts` libera os crawlers que decidem citação (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot, Bingbot) e os de treino (GPTBot, ClaudeBot, Google-Extended); bloqueia `/dashboard` e `/api/`. `llms.txt` é gerado em `app/llms.txt/route.ts` a partir de `home.ts`/`site.ts` (links Markdown, domínio e valores sempre iguais aos da página; o Lighthouse "Agentic browsing" reprova sem links). O Google ignora o arquivo.
+- Search Console: propriedade de DOMÍNIO verificada por TXT no DNS (GoDaddy). Se usar prefixo de URL, `GOOGLE_SITE_VERIFICATION` gera a meta `google-site-verification`. Sitemap `/sitemap.xml` com `lastmod` = `CONTENT_UPDATED_AT`.
+- Ícones: `icon.png` 192×192 (múltiplo de 48, exigência do favicon na busca) e `apple-icon.png` 180×180, ~10 KB cada. Não voltar a 512 px (176 KB baixados em toda visita).
+- FAQ abre com "Quanto rende investir..." montada de `INVESTMENT` (resposta direta para IA); `speakable` inclui `#investimento-title`.
 - Tudo é SSR (Next App Router): o conteúdo chega no HTML sem JavaScript.
 
 ## Regras do projeto

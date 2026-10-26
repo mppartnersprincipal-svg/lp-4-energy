@@ -415,7 +415,18 @@ export const OTHER_SOLUTIONS = {
   ] satisfies SolutionCard[],
 } as const;
 
+const BRL = new Intl.NumberFormat("pt-BR");
+// "R$ 50 mil rendem até R$ 1.600 por mês, R$ 100 mil ... e R$ 200 mil ..." (resposta direta para IA, mesma fonte dos cards)
+const INVESTMENT_SUMMARY = INVESTMENT.tiers
+  .map(({ investment, monthlyIncome }) => `R$ ${BRL.format(investment / 1000)} mil rendem até R$ ${BRL.format(monthlyIncome)} por mês`)
+  .join(", ")
+  .replace(/, ([^,]*)$/, " e $1");
+
 export const FAQ: FaqItem[] = [
+  {
+    question: "Quanto rende investir em uma usina solar com a 4E Energy?",
+    answer: `Pelas estimativas da 4E Energy, ${INVESTMENT_SUMMARY}. A renda vem das mensalidades da carteira de consumidores, descontados os custos de gestão. São valores estimados, não garantidos, sujeitos à viabilidade e aos custos de cada projeto, confirmados no estudo de viabilidade.`,
+  },
   {
     question: "Quanto preciso investir?",
     answer:

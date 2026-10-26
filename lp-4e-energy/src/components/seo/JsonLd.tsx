@@ -114,7 +114,7 @@ export function buildWebPageSchema(): JsonLdData {
       { "@type": "Legislation", name: SOURCES.lei14300.label, url: SOURCES.lei14300.url },
       { "@type": "WebPage", name: SOURCES.aneel.label, url: SOURCES.aneel.url },
     ],
-    speakable: { "@type": "SpeakableSpecification", cssSelector: ["#hero-title", "#numeros-title"] },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["#hero-title", "#numeros-title", "#investimento-title"] },
   };
 }
 

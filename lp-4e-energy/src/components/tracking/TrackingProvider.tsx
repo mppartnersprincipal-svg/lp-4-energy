@@ -16,12 +16,15 @@ interface TrackingProviderProps {
 /**
  * GTM + captura de UTMs + eventos de clique/rolagem/seção + coletor do /dashboard.
  * GA4, Google Ads e Meta Pixel são configurados DENTRO do GTM.
+ * GTM em "lazyOnload" (após o load, no ocioso): com "afterInteractive" o gtm.js + gtag (~340 KB)
+ * rodavam antes da primeira pintura e levavam o LCP mobile a 6-8 s em produção (26/10/2026).
+ * Nada se perde: o que entra no dataLayer antes fica na fila e o GTM processa ao carregar.
  */
 export function TrackingProvider({ children }: TrackingProviderProps) {
   return (
     <>
       {GTM_ID && (
-        <Script id="gtm" strategy="afterInteractive">
+        <Script id="gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
         </Script>
       )}
