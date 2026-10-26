@@ -24,7 +24,7 @@ const FIELD =
 const LABEL = "text-sm font-semibold text-ink";
 
 /**
- * Formulário "Diagnóstico de investidor". Valida, dispara form_submit (só faixas, nunca
+ * Formulário "Diagnóstico de investidor". Valida, dispara form_complete (só faixas, nunca
  * dados pessoais) e abre o WhatsApp com a mensagem pronta e a origem da visita.
  */
 export function DiagnosticForm() {
@@ -52,7 +52,7 @@ export function DiagnosticForm() {
       return;
     }
     const url = buildWhatsAppUrl(buildLeadMessage(values, getUtms()));
-    track("form_submit", { form_id: FORM_ID, capital_range: values.capitalRange, investor_type: values.investorType });
+    track("form_complete", { form_id: FORM_ID, capital_range: values.capitalRange, investor_type: values.investorType });
     setSentUrl(url);
     window.setTimeout(() => openWhatsApp(url), OPEN_DELAY_MS);
   }

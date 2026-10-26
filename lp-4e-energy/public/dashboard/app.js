@@ -19,7 +19,7 @@
     cta_ver_modelo_hero: 'Ver como funciona (hero)', cta_diagnostico_menu: 'Diagnóstico (menu)', cta_diagnostico_barra_mobile: 'Diagnóstico (barra fixa)', cta_diagnostico_final: 'Diagnóstico (CTA final)'
   };
   var GA4_CH = { 'Paid Search': 'Pesquisa paga', 'Organic Search': 'Pesquisa orgânica', Direct: 'Direto', Referral: 'Indicação', 'Organic Social': 'Social orgânico', 'Paid Social': 'Social pago', 'Cross-network': 'Várias redes', Display: 'Display', 'Paid Other': 'Outros pagos', 'Organic Maps': 'Maps', Unassigned: 'Não atribuído' };
-  var GA4_EV = { click_whatsapp: 'Cliques WhatsApp', form_submit: 'Diagnósticos enviados', click_cta: 'Botões de diagnóstico e âncoras', click_phone: 'Cliques em ligar', click_email: 'E-mail', click_instagram: 'Instagram', faq_open: 'Perguntas abertas no FAQ' };
+  var GA4_EV = { click_whatsapp: 'Cliques WhatsApp', form_complete: 'Diagnósticos enviados', click_cta: 'Botões de diagnóstico e âncoras', click_phone: 'Cliques em ligar', click_email: 'E-mail', click_instagram: 'Instagram', faq_open: 'Perguntas abertas no FAQ' };
   var ADS_STATUS = { ENABLED: ['Ativa', 'on'], PAUSED: ['Pausada', 'off'], REMOVED: ['Removida', 'rm'] };
   var COLORS = ['#06183E', '#28C7F2', '#4F6283', '#0E7FA3', '#A9B8D3', '#5AD5F5', '#040F2A', '#0D2457', '#DCE6F3'];
   var charts = {};

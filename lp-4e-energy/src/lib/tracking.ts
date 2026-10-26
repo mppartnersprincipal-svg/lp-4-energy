@@ -4,12 +4,12 @@
  * e Meta Pixel são configurados dentro do GTM. Não adicionar gtag/pixel direto.
  *
  * Eventos: click_whatsapp (cta_id) · click_cta · click_phone · click_email
- * · click_instagram · form_step (step) · form_submit · faq_open · scroll_25/50/75/100 · section_view
+ * · click_instagram · form_step (step) · form_complete · faq_open · scroll_25/50/75/100 · section_view
  * Nunca enviar dados pessoais do formulário (nome, telefone, cidade) para o dataLayer:
  * do diagnóstico só entram as faixas (capital_range, investor_type).
  *
  * Cada evento também vai para o coletor do /dashboard (lib/collector.ts), traduzido:
- * click_whatsapp e form_submit (o formulário abre o WhatsApp) → whatsapp_click; demais
+ * click_whatsapp e form_complete (o formulário abre o WhatsApp) → whatsapp_click; demais
  * cliques → cta_click; todos com cta_location = cta_id, form_id ou o tipo do link.
  */
 
@@ -22,7 +22,7 @@ export type TrackingEvent =
   | "click_email"
   | "click_instagram"
   | "form_step"
-  | "form_submit"
+  | "form_complete"
   | "faq_open"
   | "scroll_25"
   | "scroll_50"
@@ -95,7 +95,7 @@ export function getUtms(): Utms {
 // Nome do evento no coletor do /dashboard; os ausentes (scroll, section_view) ele mede sozinho
 const COLLECTOR_EVENT: Partial<Record<TrackingEvent, string>> = {
   click_whatsapp: "whatsapp_click",
-  form_submit: "whatsapp_click",
+  form_complete: "whatsapp_click",
   click_phone: "phone_click",
   click_cta: "cta_click",
   click_email: "cta_click",
@@ -116,7 +116,7 @@ export function toCollector(event: TrackingEvent, params: TrackingParams): { nam
   if (!name) return null;
   if (event === "faq_open") return { name, props: { faq_question: params.faq_question } };
   if (event === "form_step") return { name, props: { form_id: params.form_id, step: params.step } };
-  if (event === "form_submit") {
+  if (event === "form_complete") {
     return { name, props: { cta_location: params.form_id, capital_range: params.capital_range, investor_type: params.investor_type } };
   }
   return { name, props: { cta_location: params.cta_id ?? LINK_LABEL[event] } };

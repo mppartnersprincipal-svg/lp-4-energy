@@ -10,7 +10,7 @@ describe("toCollector", () => {
       props: { cta_location: "fab_whatsapp" },
     });
     expect(
-      toCollector("form_submit", { form_id: "form_diagnostico", capital_range: "50k_150k", investor_type: "empresa" }),
+      toCollector("form_complete", { form_id: "form_diagnostico", capital_range: "50k_150k", investor_type: "empresa" }),
     ).toEqual({
       name: "whatsapp_click",
       props: { cta_location: "form_diagnostico", capital_range: "50k_150k", investor_type: "empresa" },
@@ -24,7 +24,7 @@ describe("toCollector", () => {
 
   it("nunca repassa dados pessoais do formulário", () => {
     const leaked = { form_id: "form_diagnostico", capital_range: "ate_50k", nome: "Maria", telefone: "62999990000", cidade: "Rio Verde" };
-    expect(JSON.stringify(toCollector("form_submit", leaked))).not.toMatch(/Maria|62999|Rio Verde/);
+    expect(JSON.stringify(toCollector("form_complete", leaked))).not.toMatch(/Maria|62999|Rio Verde/);
   });
 
   it("rolagem e seções ficam só no GTM (o coletor mede sozinho)", () => {

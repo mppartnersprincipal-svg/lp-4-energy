@@ -88,9 +88,9 @@ Destaque em títulos: `<Highlight>` (ciano no navy; sublinhado ciano no claro). 
 
 - Todo CTA de WhatsApp tem `data-cta="<id único>"` → `click_whatsapp` + `cta_id`. Outros CTAs: `data-track="click_cta" data-cta-id="..."`. Lista completa no `README.md`.
 - `WhatsAppButton` renderiza o `href` sem UTMs e, no clique, troca pela URL com a origem (`buildWhatsAppUrlWithOrigin`).
-- `DiagnosticForm` (`lib/lead.ts`): nome, WhatsApp, cidade, faixa de capital, perfil (PF/empresa), terreno (opcional). Dispara `form_submit` com `form_id`, `capital_range`, `investor_type` e abre `wa.me` com a mensagem pronta + origem. **Nunca** colocar nome, telefone ou cidade no dataLayer (teste em `tracking.test.ts` e no `scripts/qa.mjs`).
+- `DiagnosticForm` (`lib/lead.ts`): nome, WhatsApp, cidade, faixa de capital, perfil (PF/empresa), terreno (opcional). Dispara `form_complete` com `form_id`, `capital_range`, `investor_type` e abre `wa.me` com a mensagem pronta + origem. **Nunca** colocar nome, telefone ou cidade no dataLayer (teste em `tracking.test.ts` e no `scripts/qa.mjs`).
 - Automáticos: `scroll_25/50/75/100`, `section_view` (toda `main section[id]`), `faq_open`.
-- GTM só carrega com `NEXT_PUBLIC_GTM_ID` válido. GA4, Google Ads e Meta Pixel ficam DENTRO do GTM (contêiner a gerar em `gtm/`). Conversão do Ads em `click_whatsapp` e `form_submit`.
+- GTM só carrega com `NEXT_PUBLIC_GTM_ID` válido. GA4, Google Ads e Meta Pixel ficam DENTRO do GTM (contêiner a gerar em `gtm/`). Conversão do Ads em `click_whatsapp` e `form_complete`.
 - Painel `/dashboard` (`DASHBOARD.md`): coletor anônimo `lib/collector.ts`, rotas `app/api/*`, banco Supabase `energy4e_*`.
 
 ---

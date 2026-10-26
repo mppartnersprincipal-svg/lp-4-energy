@@ -9,14 +9,14 @@ GTM/GA4/Pixel (que seguem o `README.md`). Inclui as seções **Google Ads** e **
 | Peça | Arquivo | O quê |
 |---|---|---|
 | Coletor | `src/lib/collector.ts` + `components/tracking/Collector.tsx` | Sessão anônima em `sessionStorage` (`fe-s`, renova após 30 min parada), id de visitante em `localStorage` por 13 meses (`fe-v`, apagado se `fe-consent = essential`), fila com envio a cada 10 eventos / 5 s / aba oculta / `pagehide` (`sendBeacon`). Sem IP, sem cookies. Não roda para bots nem no /dashboard. Cada rota abre um `page_view` com o próprio `page_type` (`home`, `politica`). |
-| Eventos | `collector.ts` + `track()` em `src/lib/tracking.ts` | Próprios: `page_view`, `page_leave`, `click`, `section_view`. Espelhados do `dataLayer` (`toCollector`): `click_whatsapp` **e `form_submit`** → `whatsapp_click` (o formulário abre o WhatsApp), `click_cta`/`click_email`/`click_instagram` → `cta_click`, `click_phone` → `phone_click`, `faq_open`, `form_step`. Do formulário só entram `capital_range` e `investor_type`. |
+| Eventos | `collector.ts` + `track()` em `src/lib/tracking.ts` | Próprios: `page_view`, `page_leave`, `click`, `section_view`. Espelhados do `dataLayer` (`toCollector`): `click_whatsapp` **e `form_complete`** → `whatsapp_click` (o formulário abre o WhatsApp), `click_cta`/`click_email`/`click_instagram` → `cta_click`, `click_phone` → `phone_click`, `faq_open`, `form_step`. Do formulário só entram `capital_range` e `investor_type`. |
 | Ingestão | `src/app/api/collect/route.ts` + `src/server/analytics/payload.js` | Valida o lote, descarta bots, deriva dispositivo/navegador/SO do user-agent e cidade/UF dos cabeçalhos da Vercel. |
 | Banco | `supabase/migrations/0001_energy4e_analytics.sql` | `energy4e_sessions` / `energy4e_events` + RPC `energy4e_upsert_session`. RLS ligado sem policies (só a service role acessa). Projeto compartilhado `khipnjfbxjgvmjvyxero`. |
 | Atribuição | `src/server/analytics/classify.js` | `gclid` → Google Ads; `utm_source=facebook/instagram` + `utm_medium` pago → **Meta Ads**; referrer → orgânico, direto, indicação. |
 | Login | `src/app/api/login/route.ts` + `auth.js` | Senha única (`DASHBOARD_PASSWORD`) → token HMAC de 30 dias (`DASHBOARD_SECRET`). |
 | Consulta | `src/app/api/dashboard/route.ts` + `report.js` | KPIs com comparação de período, série diária, origens, dispositivos, WhatsApp por botão/formulário + pivô por canal, funil das 11 seções, FAQ, campanhas UTM, jornadas, heatmap 7×24, geografia, cliques, feed ao vivo. |
 | Google Ads | `src/app/api/google-ads/route.ts` + `google-ads.js` | Consulta separada (se falhar, o resto do painel não espera). Conta da 4E via MCC `603-989-2603`. |
-| GA4 | `src/app/api/ga4/route.ts` + `ga4.js` | GA4 Data API (conta de serviço, só leitura). Conta `click_whatsapp`, `form_submit`, `click_cta`, `click_phone`, `click_email`, `click_instagram`, `faq_open`. |
+| GA4 | `src/app/api/ga4/route.ts` + `ga4.js` | GA4 Data API (conta de serviço, só leitura). Conta `click_whatsapp`, `form_complete`, `click_cta`, `click_phone`, `click_email`, `click_instagram`, `faq_open`. |
 | UI | `public/dashboard/index.html` + `app.js` | HTML estático (rewrite `/dashboard` → `/dashboard/index.html` no `next.config.ts`), Chart.js via CDN, filtros na URL, identidade da 4E (navy/ciano, Montserrat/Inter). `noindex` + `robots.ts`. |
 
 ### Funil (seções da LP, na ordem)

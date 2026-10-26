@@ -1,5 +1,5 @@
 // QA da LP 4E Energy: capturas por largura, overflow horizontal, dataLayer com UTMs,
-// formulário de diagnóstico (form_submit sem dado pessoal) e console limpo.
+// formulário de diagnóstico (form_complete sem dado pessoal) e console limpo.
 // Uso: node scripts/qa.mjs http://localhost:3000 <pasta-de-saida>
 import { chromium } from "playwright";
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -90,7 +90,7 @@ results.dataLayer = dataLayer;
 const events = dataLayer.filter((e) => typeof e.event === "string" && !e.event.startsWith("gtm."));
 const names = events.map((e) => e.event);
 const missingUtm = events.filter((e) => e.utm_source !== "google" || e.utm_campaign !== "qa-teste").map((e) => e.event);
-const formEvent = events.find((e) => e.event === "form_submit");
+const formEvent = events.find((e) => e.event === "form_complete");
 const leaked = JSON.stringify(dataLayer).match(/Teste Qualidade|62999990000|Goiânia/);
 const sectionIds = [...new Set(events.filter((e) => e.event === "section_view").map((e) => e.section_id))];
 results.form = {
