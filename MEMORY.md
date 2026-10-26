@@ -6,19 +6,19 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 
 ---
 
-## Status atual (2026-10-21)
+## Status atual (2026-10-26)
 
-**No GitHub, sem deploy.** Repositório público https://github.com/mppartnersprincipal-svg/lp-4-energy (raiz = esta pasta; app em `lp-4e-energy/`, Root Directory na Vercel). Briefing, manual e logo originais ficam fora do git (`.gitignore` da raiz).
+**No ar em https://4eenergy.com.br** (Vercel `lp-4e-energy`, deploy automático da `main`; `www` → 308 para o domínio principal; DNS na GoDaddy com A `@` → 216.198.79.1 / 64.29.17.1 e CNAME `www` → Vercel; MX/SPF intactos). Substituiu o site antigo do construtor da GoDaddy. Repositório público https://github.com/mppartnersprincipal-svg/lp-4-energy (raiz = esta pasta; app em `lp-4e-energy/`, Root Directory na Vercel). Briefing, manual e logo originais ficam fora do git (`.gitignore` da raiz).
 
 | Frente | Status |
 |---|---|
 | Plano (PLANO.md) + DESIGN-SYSTEM.md | ✅ aprovados pelo Pedro ("ok") |
 | LP (11 seções, formulário de diagnóstico, política, 404, OG image, sitemap, robots, llms.txt) | ✅ build e lint verdes |
 | Tracking fase 1 (dataLayer, UTMs, eventos, data-cta) | ✅ testado com Playwright (`scripts/qa.mjs`) |
-| Painel /dashboard (coletor, 5 rotas, UI com a marca, migration `energy4e_*`) | ✅ código pronto; migration **não aplicada** |
-| Contêiner do GTM | ⏳ aguarda IDs (GTM, GA4, conversão do Ads, Pixel) |
+| Painel /dashboard (coletor, 5 rotas, UI com a marca, migration `energy4e_*`) | ✅ no ar; migrations 0001 e 0002 aplicadas pelo Pedro no projeto compartilhado (26/10); dados de teste zerados. Seções Google Ads e GA4 do painel ainda não conferidas |
+| GTM `GTM-WH5SJJB7` · GA4 `G-39VQ4LFZJS` · Ads `AW-18524866634` / `KIIsCOPkvqodEMqQrIFF` | ✅ contêiner importado e publicado (versão 2); teste no ar: `page_view`, `section_view`, `click_whatsapp` no GA4 e conversão do Ads no clique. Sem Meta Pixel |
 | Repo GitHub | ✅ `lp-4-energy`, branch `main` (22/10/2026) |
-| Vercel + domínio | ⏳ aguarda pedido do Pedro |
+| Vercel + domínio | ✅ 4eenergy.com.br (26/10/2026) |
 | Lighthouse mobile (build de produção, simulado), visual v2 | ⚠️ Performance 84 a 87 · SEO 100 · A11y 100 · Boas práticas 100 · LCP 3,9 a 4,1 s · CLS 0 · TBT 70 a 130 ms · desktop 100 (LCP 0,8 s). O LCP ficou no limite do gate (4 s): preço das fotos e das seções presas ao scroll, como na Visão Solar (66 a 78). Medir de novo em produção (PageSpeed) depois do deploy |
 
 ---
@@ -26,7 +26,8 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 ## Pendências
 
 ### Com o cliente (detalhe em `lp-4e-energy/docs/PENDENCIAS.md`)
-- [ ] WhatsApp comercial, domínio, CNPJ, endereço, e-mail
+- [x] WhatsApp comercial (62) 9 9607-1233 e domínio 4eenergy.com.br (26/10/2026)
+- [ ] CNPJ, endereço, e-mail
 - [ ] Logo em vetor, fotos reais (usinas, BESS, equipe, Marcos), autorização dos logos de parceiros
 - [ ] Confirmar números de prova ("+30 usinas", "centenas de projetos") antes dos anúncios
 - [x] Valores de renda: cliente enviou as faixas investimento x retorno com aviso (26/10/2026), publicadas na seção `investimento`
@@ -35,11 +36,12 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 
 ### Internas (M|P)
 - [x] Repo `mppartnersprincipal-svg/lp-4-energy` criado e enviado (22/10/2026)
-- [ ] Projeto Vercel com Root Directory `lp-4e-energy` quando o Pedro pedir
-- [ ] Gerar `gtm/GTM-XXX-importar.json` com a skill `lp-tracking-dashboard` quando chegarem os IDs; Pedro importa e publica
-- [ ] Aplicar `supabase/migrations/0001_energy4e_analytics.sql` no projeto compartilhado (`list_tables` antes para confirmar que o prefixo é novo)
-- [ ] Cadastrar variáveis na Vercel (tabela em `DASHBOARD.md`) + redeploy; visita `qa-seed`; conferir Ads (conta da 4E) e GA4 (Leitor)
-- [ ] GA4: eventos-chave `click_whatsapp` e `form_submit`; dimensões `cta_id`, `section_id`, `capital_range`
+- [x] Projeto Vercel + domínio 4eenergy.com.br (26/10/2026)
+- [x] `gtm/GTM-WH5SJJB7-importar.json` gerado, importado e publicado (26/10/2026)
+- [x] Migrations 0001 e 0002 aplicadas pelo Pedro (o MCP do Supabase desta máquina não tem acesso ao projeto `khipnjfbxjgvmjvyxero`: passar SQL ao Pedro)
+- [ ] Conferir no painel as seções Google Ads (conta da 4E) e GA4 (conta de serviço como Leitor)
+- [ ] GA4: eventos-chave `click_whatsapp` e `form_complete`; dimensões `cta_id`, `section_id`, `capital_range`; filtro de tráfego interno
+- [ ] Cancelar o plano do construtor de sites da GoDaddy (site antigo fora do ar)
 - [ ] Campanha de Pesquisa (seção 8 do PLANO.md): termos de investimento + negativas; Meta só remarketing no início
 - [ ] Pedir ao cliente: SLA de resposta ≤ 15 min, mensagem automática do WhatsApp Business, CRM
 
@@ -77,3 +79,4 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 | 2026-10-21 | QA Playwright (360/390/768/1024/1440): sem overflow, UTMs em todo evento, 4 marcas de scroll, 11 `section_view` com rolagem contínua, `form_submit` sem dado pessoal, console limpo, 404 e política OK |
 | 2026-10-21 | Performance: Reveal em CSS + 1 IO, Lenis no ocioso, Montserrat 700 estática, Inter sem preload. Lighthouse mobile 78 → 94/95, LCP 4,1 → 2,9 s, TBT 280 → 50 ms; desktop 100 |
 | 2026-10-21 | **Visual v2** (Pedro achou a v1 simples demais): hero preso ao scroll com o anel da marca se abrindo sobre a foto da usina (clip-path) e HUD de telemetria, marquee cruzado, números grandes com contador, cards com borda que segue o cursor, "como funciona" em scrollytelling com foto por etapa, fluxo da energia com traços animados + gráfico que cresce com a rolagem, selo giratório, parallax na foto do sobre, galeria bento com revelação por clip-path, fotos de fundo no diagnóstico e no CTA final, 24 ícones próprios (lucide removido). 9 fotos ilustrativas do Unsplash em `public/images` (WebP 480/960/1600 + blur). Lighthouse mobile: ver status |
+| 2026-10-26 | Título de "Como funciona" cortado em notebook corrigido; copy de retorno "até 3,6% ao mês" (texto do cliente); seção Investimento x retorno; LP publicada em 4eenergy.com.br (DNS GoDaddy → Vercel); WhatsApp real; `form_submit` → `form_complete`; GTM/GA4/Ads publicados e testados; migrations do painel aplicadas e dados de teste zerados |
