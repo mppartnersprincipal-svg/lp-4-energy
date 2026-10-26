@@ -40,7 +40,8 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 - [x] `gtm/GTM-WH5SJJB7-importar.json` gerado, importado e publicado (26/10/2026)
 - [x] Migrations 0001 e 0002 aplicadas pelo Pedro (o MCP do Supabase desta máquina não tem acesso ao projeto `khipnjfbxjgvmjvyxero`: passar SQL ao Pedro)
 - [ ] Conferir no painel as seções Google Ads (conta da 4E) e GA4 (conta de serviço como Leitor)
-- [ ] GA4: eventos-chave `click_whatsapp` e `form_complete`; dimensões `cta_id`, `section_id`, `capital_range`; filtro de tráfego interno
+- [x] GA4: eventos-chave `click_whatsapp` e `form_complete` e dimensões `cta_id`, `section_id`, `capital_range` criados pelo Pedro (26/10/2026)
+- [ ] GA4: filtro de tráfego interno (IP da equipe)
 - [ ] Cancelar o plano do construtor de sites da GoDaddy (site antigo fora do ar)
 - [ ] Campanha de Pesquisa (seção 8 do PLANO.md): termos de investimento + negativas; Meta só remarketing no início
 - [ ] Pedir ao cliente: SLA de resposta ≤ 15 min, mensagem automática do WhatsApp Business, CRM
