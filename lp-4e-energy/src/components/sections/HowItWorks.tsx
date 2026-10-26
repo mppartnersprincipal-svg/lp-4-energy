@@ -45,17 +45,19 @@ export function HowItWorks() {
       className={`relative bg-navy ${isReduced ? "section-y" : `${PINNED_HEIGHT} max-lg:h-auto max-lg:py-20`}`}
       style={{ ["--p" as string]: 0 }}
     >
-      <div className={isReduced ? "container-site" : "lg:sticky lg:top-0 lg:h-[100svh] lg:overflow-hidden"}>
-        <div className={`container-site ${isReduced ? "" : "lg:flex lg:h-full lg:items-center lg:gap-16"}`}>
+      {/* pt = altura do header fixo; items-center-safe: se a tela for baixa, o excesso vai para baixo e o título nunca é cortado */}
+      <div className={isReduced ? "container-site" : "lg:sticky lg:top-0 lg:h-[100svh] lg:overflow-hidden lg:pt-(--header-h)"}>
+        <div className={`container-site ${isReduced ? "" : "lg:flex lg:h-full lg:items-center-safe lg:gap-16"}`}>
           {/* Texto e etapas */}
           <div className="relative z-10 lg:flex-1">
             <Eyebrow onDark>{HOW_IT_WORKS.eyebrow}</Eyebrow>
-            <h2 id="modelo-title" className="text-display mt-4 max-w-[16ch] text-[clamp(2rem,1.2rem+3vw,3.6rem)] leading-[1.04] font-bold text-balance text-white">
+            <h2 id="modelo-title" className="text-display mt-4 max-w-[16ch] text-[clamp(2rem,1.2rem+3vw,3.6rem)] leading-[1.04] lg:max-w-[20ch] lg:text-[min(clamp(2rem,1.2rem+3vw,3.6rem),5.2svh)] font-bold text-balance text-white">
               {HOW_IT_WORKS.title} <Highlight onDark>{HOW_IT_WORKS.titleHighlight}</Highlight>
             </h2>
-            <p className="mt-5 max-w-[32rem] leading-relaxed text-mist">{HOW_IT_WORKS.description}</p>
+            {/* Telas baixas (notebook 1366×768): o subtítulo sai da vista para as 4 etapas e o botão caberem sem corte */}
+            <p className="mt-5 max-w-[32rem] leading-relaxed text-mist lg:[@media(max-height:820px)]:hidden">{HOW_IT_WORKS.description}</p>
 
-            <ol className="relative mt-10 space-y-1 pl-9">
+            <ol className="relative mt-10 space-y-1 pl-9 lg:mt-[min(2.5rem,3.5svh)]">
               <span aria-hidden="true" className="absolute top-3 bottom-3 left-[7px] w-px bg-white/10">
                 <span className="absolute inset-x-0 top-0 h-full origin-top bg-cyan max-lg:hidden" style={{ scale: "1 var(--p)" }} />
               </span>
@@ -63,7 +65,7 @@ export function HowItWorks() {
                 const isOpen = isReduced || index === step;
                 const picture = photo(name);
                 return (
-                  <li key={title} aria-current={index === step ? "step" : undefined} className="relative py-3">
+                  <li key={title} aria-current={index === step ? "step" : undefined} className="relative py-3 lg:[@media(max-height:820px)]:py-1.5">
                     <span
                       aria-hidden="true"
                       className={`absolute top-[18px] -left-9 size-[15px] rounded-full border-2 transition-all duration-500 ${
@@ -100,7 +102,7 @@ export function HowItWorks() {
               })}
             </ol>
 
-            <div className="mt-10 lg:mt-12">
+            <div className="mt-10 lg:mt-[min(3rem,4svh)]">
               <WhatsAppButton ctaId="cta_whatsapp_modelo" label="Falar com um especialista" />
             </div>
           </div>
