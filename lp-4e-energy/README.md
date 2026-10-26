@@ -16,34 +16,32 @@ npm test        # Vitest (formulário, tracking) + node --test (analytics do pai
 
 | Ferramenta | ID | Onde |
 |---|---|---|
-| Google Tag Manager | `[PREENCHER GTM-XXXXXXX]` | `NEXT_PUBLIC_GTM_ID` → `components/tracking/TrackingProvider.tsx` |
-| GA4 | `[PREENCHER G-XXXXXXXXXX]` | dentro do GTM |
-| Google Ads | conversão "Conversa no WhatsApp" `[PREENCHER id|rótulo]` | dentro do GTM, disparada em `click_whatsapp` e `form_submit` |
-| Meta Pixel | `[PREENCHER]` | dentro do GTM (`Contact` em `click_whatsapp`, `Lead` em `form_submit`) |
+| Google Tag Manager | `GTM-WH5SJJB7` | `NEXT_PUBLIC_GTM_ID` (Vercel) → `components/tracking/TrackingProvider.tsx` |
+| GA4 | `G-39VQ4LFZJS` | dentro do GTM |
+| Google Ads | conversão "Clique Botão de Wpp" `AW-18524866634` / `KIIsCOPkvqodEMqQrIFF` | dentro do GTM, disparada em `click_whatsapp` e `form_complete` |
+| Meta Pixel | `[PREENCHER]` (ainda não informado) | dentro do GTM (`Contact` em `click_whatsapp`, `Lead` em `form_complete`) |
 | Painel próprio | `/dashboard` | ver `DASHBOARD.md` |
 
 **Regra:** GA4, Ads e Pixel só pelo GTM. Nada de `gtag`/`fbq` direto no código (contaria em dobro).
 
 ### Contêiner do GTM
 
-Gerar com a skill `lp-tracking-dashboard` quando os IDs chegarem:
-
-```bash
-python ~/.claude/skills/lp-tracking-dashboard/scripts/gtm_container.py --gtm GTM-XXXXXXX --ga4 G-XXXXXXXXXX \
-  --name <dominio> --conv "Conversa no WhatsApp|<id>|<rótulo>|click_whatsapp" --conv "Conversa no WhatsApp|<id>|<rótulo>|form_submit" \
-  --pixel <id-do-pixel> --out gtm/GTM-XXXXXXX-importar.json
-```
+Arquivo gerado: `gtm/GTM-WH5SJJB7-importar.json` (26/10/2026, skill `lp-tracking-dashboard`, com os parâmetros
+`capital_range` e `investor_type` acrescentados à lista padrão). Para regenerar, rodar o `gtm_container.py` da skill com
+`--events click_whatsapp,click_cta,click_phone,click_email,click_instagram,form_step,form_complete,faq_open,scroll_25,scroll_50,scroll_75,scroll_100,section_view`
+e as duas `--conv` (mesma conversão em `click_whatsapp` e `form_complete`). O formulário usa `form_complete`, nunca
+`form_submit` (nome reservado da medição otimizada do GA4: dispararia junto com qualquer `<form>`).
 
 Importar: GTM → Administrador → Importar contêiner → arquivo → espaço de trabalho existente → **Mesclar** +
 **Substituir conflitantes** → Visualizar (clicar num WhatsApp) → **Enviar → Publicar**. No GA4, marcar `click_whatsapp` e
-`form_submit` como **eventos-chave** e criar as dimensões personalizadas `cta_id`, `section_id`, `capital_range`.
+`form_complete` como **eventos-chave** e criar as dimensões personalizadas `cta_id`, `section_id`, `capital_range`.
 
 ### Eventos (`src/lib/tracking.ts`)
 
 | Evento | Quando | Parâmetros |
 |---|---|---|
 | `click_whatsapp` | qualquer link de WhatsApp (`data-cta`) | `cta_id` |
-| `form_submit` | enviou o diagnóstico (abre o WhatsApp com a mensagem pronta) | `form_id`, `capital_range`, `investor_type` |
+| `form_complete` | enviou o diagnóstico (abre o WhatsApp com a mensagem pronta) | `form_id`, `capital_range`, `investor_type` |
 | `click_cta` | âncoras e botões de diagnóstico (`data-track`) | `cta_id` |
 | `click_email` / `click_instagram` / `click_phone` | links de contato | – |
 | `faq_open` | abriu uma pergunta | `faq_question` |
