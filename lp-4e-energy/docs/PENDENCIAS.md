@@ -7,7 +7,7 @@ Tudo o que a LP mostra sem confirmação do cliente está marcado aqui. Nada aba
 | Item | Onde na LP | Estado |
 |---|---|---|
 | WhatsApp comercial | todos os botões (`NEXT_PUBLIC_WHATSAPP_NUMBER`) | **PENDENTE**: placeholder `5500000000000` em `src/lib/site.ts` |
-| Domínio final | canonical, OG, sitemap, Schema (`NEXT_PUBLIC_SITE_URL`) | **PENDENTE**: hoje `lp-4e-energy.vercel.app` |
+| Domínio final | canonical, OG, sitemap, Schema (`NEXT_PUBLIC_SITE_URL`) | **4eenergy.com.br** (26/10/2026), substituindo o site antigo do construtor da GoDaddy; DNS na GoDaddy: A `@` → 216.198.79.1 e 64.29.17.1, CNAME `www` → Vercel. E-mail (MX/SPF) mantido |
 | CNPJ, razão social, endereço | rodapé, política de privacidade, Schema | **PENDENTE**: `cnpj: null`, `address: null` (blocos ocultos) |
 | E-mail institucional | rodapé, política, Schema | placeholder `contato@4eenergy.com.br` |
 | Horário de atendimento | rodapé | "Segunda a sexta, das 8h às 18h" (a confirmar) |

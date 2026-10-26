@@ -17,7 +17,7 @@ export const SITE = {
   name: "4E Energy",
   legalName: "4E Energy",
   tagline: "Usinas fotovoltaicas para investidores",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lp-4e-energy.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://4eenergy.com.br",
   // PLACEHOLDER: e-mail institucional
   email: "contato@4eenergy.com.br",
   instagramUrl: "https://www.instagram.com/4eenergy/",

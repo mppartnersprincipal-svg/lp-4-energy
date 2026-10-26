@@ -15,7 +15,7 @@ Landing page de conversão para investidores em usinas fotovoltaicas geridas (Go
 | Objetivo da LP | Conversa qualificada no WhatsApp (vendas diretas + autoridade) |
 | CTA principal | "Falar com um especialista" (WhatsApp) + formulário "Diagnóstico de investidor" |
 | WhatsApp | `[PREENCHER]` em `NEXT_PUBLIC_WHATSAPP_NUMBER` (placeholder `5500000000000` em `src/lib/site.ts`) |
-| URL de produção | `[PREENCHER]` em `NEXT_PUBLIC_SITE_URL` (hoje `https://lp-4e-energy.vercel.app`) |
+| URL de produção | `https://4eenergy.com.br` (domínio do cliente na GoDaddy; `www` redireciona 308 para o domínio principal na Vercel). Padrão de `NEXT_PUBLIC_SITE_URL` em `src/lib/site.ts` |
 | Ticket / ciclo (interno, não publicar) | R$ 45 mil · 20 dias · 3 etapas · 3 em 10 leads fecham |
 
 Insumos em `../`: `4 Energy - Kick-Off.docx.pdf` (briefing, contém senhas: fora do git), `LOGO 4E.jpeg - MANUAL.pdf` (manual da marca) e o logo em JPEG.
