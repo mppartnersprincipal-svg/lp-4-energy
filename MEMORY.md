@@ -29,7 +29,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 - [ ] WhatsApp comercial, domínio, CNPJ, endereço, e-mail
 - [ ] Logo em vetor, fotos reais (usinas, BESS, equipe, Marcos), autorização dos logos de parceiros
 - [ ] Confirmar números de prova ("+30 usinas", "centenas de projetos") antes dos anúncios
-- [ ] Aprovar ou vetar "potencial de até 3,6% ao mês" (fora da v1)
+- [x] Valores de renda: cliente enviou as faixas investimento x retorno com aviso (26/10/2026), publicadas na seção `investimento`
 - [ ] Validar FAQ (capital mínimo, prazo, substituição de consumidor, saída) e faixas de capital do formulário
 - [ ] Revisão técnico-comercial do Marcos nas seções `rentabilidade`, `seguranca` e FAQ
 
@@ -57,6 +57,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 | 2026-10-21 | Conceito visual "Telemetria" (navy + marcas de escala em ciano); v1 sem fotos foi rejeitada pelo Pedro → v2 com fotos ilustrativas do Unsplash, legendadas como ilustrativas, até chegarem as reais | Pedro quer o nível da Visão Solar e da Pacheco (fotos, ícones únicos, animação de scroll) |
 | 2026-10-21 | Logo: recorte circular do JPEG em PNG/WebP; header usa símbolo + nome em texto | Não há vetor; manual exige 160px para a arte completa |
 | 2026-10-21 | Fontes locais: Montserrat 700 estática (títulos, preload) + Inter variável (corpo, sem preload) | Prompt padrão exige `next/font/local`; menos bytes no caminho do LCP |
+| 2026-10-26 | Seção própria "Investimento x retorno" (`#investimento`, navy) logo após "De onde vem a renda", com as 3 faixas do cliente, aviso colado nos valores e CTA `cta_whatsapp_investimento` | Pedido do cliente para destacar o tema; seção própria dá URL final para anúncio e linha no funil do painel |
 | 2026-10-22 | LP aprovada pelo Pedro ("ÓTIMO! Ficou muito bom!"). Primeiro commit enviado para `lp-4-energy`; LP salva como referência na skill `landing-page-references` (`sites/lp-4e-energy`, `patterns.md` consolidado) |
 | 2026-10-22 | SEO/GEO implementado com as skills `claude-seo` (title/description nos limites, H2 em pergunta, bloco de definição citável, links para Lei 14.300 e ANEEL, datas de revisão, schemas WebPage/Person, robots com OAI-SearchBot/Claude-SearchBot/Applebot) | Pedro perguntou se a LP estava otimizada para SEO e GEO; a base estava, faltavam citabilidade, datas, fontes e crawlers de citação |
 | 2026-10-22 | CTAs com efeito "liquid glass" (pedido do Pedro, a partir de um componente shadcn): integrado no `Button` próprio com CSS + filtro SVG, sem instalar shadcn/Radix/cva | Projeto não usa shadcn; o efeito é só `backdrop-filter` + sombras internas |

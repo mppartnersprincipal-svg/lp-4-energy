@@ -5,6 +5,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
+import { InvestmentReturn } from "@/components/sections/InvestmentReturn";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ManagementGrid } from "@/components/sections/ManagementGrid";
 import { Marquee } from "@/components/sections/Marquee";
@@ -36,6 +37,7 @@ export default function HomePage() {
       <AudienceFit />
       <HowItWorks />
       <RevenueModel />
+      <InvestmentReturn />
       <ManagementGrid />
       <SecurityBlocks />
       <About />

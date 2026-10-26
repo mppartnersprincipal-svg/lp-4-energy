@@ -15,6 +15,7 @@ import {
   IconManutencao,
   IconMonitor,
   IconObra,
+  IconPino,
   IconRaio,
   IconRelatorio,
   IconRenda,
@@ -215,6 +216,48 @@ export const REVENUE = {
   },
 } as const;
 
+export interface InvestmentTier {
+  /** Capital investido, em reais */
+  investment: number;
+  /** Teto da renda mensal estimada, em reais */
+  monthlyIncome: number;
+}
+
+export interface InvestmentBenefit {
+  icon: Icon;
+  title: string;
+  description: string;
+}
+
+/** Faixas enviadas pelo cliente em 26/10/2026, sempre com o aviso logo abaixo. */
+export const INVESTMENT = {
+  eyebrow: "Investimento x retorno",
+  title: "Quanto rende investir em uma usina solar com a 4E Energy?",
+  titleHighlight: "Renda mensal estimada por faixa de investimento.",
+  description:
+    "Veja a renda mensal estimada para três faixas de capital. O valor de cada projeto é confirmado no estudo de viabilidade, com todas as premissas apresentadas.",
+  tiers: [
+    { investment: 50_000, monthlyIncome: 1_600 },
+    { investment: 100_000, monthlyIncome: 3_600 },
+    { investment: 200_000, monthlyIncome: 7_200 },
+  ] satisfies InvestmentTier[],
+  benefits: [
+    {
+      icon: IconManutencao,
+      title: "Suporte completo",
+      description: "A 4E Energy acompanha toda a execução do projeto, da implantação à gestão da usina.",
+    },
+    {
+      icon: IconPino,
+      title: "Não tem espaço para instalar?",
+      description: "Nós providenciamos alternativas para viabilizar o seu projeto.",
+    },
+  ] satisfies InvestmentBenefit[],
+  closing: "Invista em energia solar e construa seu patrimônio com potencial de renda recorrente.",
+  notice: "*Valores estimados, não garantidos, sujeitos à viabilidade e aos custos do projeto.",
+  ctaMessage: "Olá, vim pela página da 4E Energy e quero conhecer a oportunidade de investimento em usina solar.",
+} as const;
+
 export interface ManagementItem {
   icon: Icon;
   title: string;
@@ -376,12 +419,12 @@ export const FAQ: FaqItem[] = [
   {
     question: "Quanto preciso investir?",
     answer:
-      "Cada projeto tem um estudo de viabilidade próprio, com faixas de investimento diferentes conforme a potência da usina e a área disponível. Na primeira conversa apresentamos as opções compatíveis com o seu capital.",
+      "Cada projeto tem um estudo de viabilidade próprio, com faixas de investimento diferentes conforme a potência da usina e a área disponível. Como referência, um investimento de R$ 50 mil tem renda mensal estimada de até R$ 1.600, valor não garantido e sujeito à viabilidade e aos custos do projeto. Na primeira conversa apresentamos as opções compatíveis com o seu capital.",
   },
   {
     question: "Preciso ter terreno?",
     answer:
-      "Não necessariamente. A área disponível é um dos pontos avaliados no estudo de viabilidade. Informe no diagnóstico se você já possui terreno ou área para a usina.",
+      "Não. Se você não tiver espaço para instalar, a 4E Energy providencia alternativas para viabilizar o seu projeto. Informe no diagnóstico se você já possui terreno ou área para a usina.",
   },
   {
     question: "Quem são os consumidores da usina?",

@@ -53,14 +53,14 @@ Importar: GTM → Administrador → Importar contêiner → arquivo → espaço 
 Todos levam as UTMs da entrada (`utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`). Nome, telefone e
 cidade do formulário **nunca** vão para o `dataLayer` nem para o painel (há teste para isso).
 
-`cta_id` de WhatsApp: `cta_whatsapp_navbar`, `cta_whatsapp_hero`, `cta_whatsapp_modelo`, `cta_whatsapp_rentabilidade`,
+`cta_id` de WhatsApp: `cta_whatsapp_navbar`, `cta_whatsapp_hero`, `cta_whatsapp_modelo`, `cta_whatsapp_rentabilidade`, `cta_whatsapp_investimento`,
 `cta_whatsapp_seguranca`, `cta_whatsapp_faq`, `cta_whatsapp_final`, `cta_whatsapp_footer`, `cta_whatsapp_footer_contato`,
 `cta_whatsapp_menu`, `cta_whatsapp_barra_mobile`, `fab_whatsapp`, `cta_whatsapp_404`, `cta_whatsapp_assinatura`,
 `cta_whatsapp_gestao_usinas`, `cta_whatsapp_bess`. Formulário: `form_diagnostico`.
 Outros `cta_id`: `cta_ver_modelo_hero`, `cta_diagnostico_menu`, `cta_diagnostico_barra_mobile`, `cta_diagnostico_final`.
 
-Seções (`id`, na ordem): `topo`, `numeros`, `para-quem`, `modelo`, `rentabilidade`, `gestao`, `seguranca`, `sobre`, `usinas`,
-`diagnostico`, `outras-solucoes`, `perguntas-frequentes`, `cta-final`. URLs finais por grupo de anúncio: `/#modelo`, `/#rentabilidade`,
+Seções (`id`, na ordem): `topo`, `numeros`, `para-quem`, `modelo`, `rentabilidade`, `investimento`, `gestao`, `seguranca`, `sobre`,
+`usinas`, `diagnostico`, `outras-solucoes`, `perguntas-frequentes`, `cta-final`. URLs finais por grupo de anúncio: `/#modelo`, `/#rentabilidade`, `/#investimento`,
 `/#gestao`, `/#seguranca`, `/#diagnostico`.
 
 ### Fotos

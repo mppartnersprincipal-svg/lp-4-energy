@@ -22,6 +22,14 @@ Investidores (pessoa física ou empresa) que buscam renda recorrente, previsibil
 
 Uma usina solar de solo construída em nome do investidor e administrada por uma empresa especializada. A 4E Energy faz o estudo de viabilidade, constrói e conecta a usina à distribuidora, capta empresas e residências para a energia por assinatura e assume operação, manutenção mensal e relatórios. Os consumidores da carteira recebem os créditos de energia com até 30% de desconto e pagam uma mensalidade; essa receita, descontados os custos de gestão, é a renda recorrente do investidor.
 
+## Investimento x retorno (valores estimados)
+
+- R$ 50 mil investidos: renda mensal estimada de até R$ 1.600
+- R$ 100 mil investidos: renda mensal estimada de até R$ 3.600
+- R$ 200 mil investidos: renda mensal estimada de até R$ 7.200
+- Suporte completo da implantação à gestão da usina. Quem não tem espaço para instalar recebe alternativas para viabilizar o projeto.
+- Valores estimados, não garantidos, sujeitos à viabilidade e aos custos do projeto.
+
 ## Regulamentação e fontes
 
 - Geração distribuída regulada pela ANEEL: https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida
@@ -35,4 +43,4 @@ Uma usina solar de solo construída em nome do investidor e administrada por uma
 - Instagram: https://www.instagram.com/4eenergy/
 - Região: Goiás, Brasil
 - Responsável técnico-comercial: Marcos Lamounier, diretor
-- Conteúdo revisado em: 2026-10-22
+- Conteúdo revisado em: 2026-10-26

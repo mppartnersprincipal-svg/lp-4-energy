@@ -4,10 +4,10 @@ import { TZ_OFFSET_MS, localDate } from './period.js';
 
 // Seções da LP, na ordem de leitura. A chave é o id da <section> (o hero é #topo).
 export const SECTIONS = {
-  home: ['topo', 'numeros', 'para-quem', 'modelo', 'rentabilidade', 'gestao', 'seguranca', 'sobre', 'usinas', 'diagnostico', 'outras-solucoes', 'perguntas-frequentes', 'cta-final'],
+  home: ['topo', 'numeros', 'para-quem', 'modelo', 'rentabilidade', 'investimento', 'gestao', 'seguranca', 'sobre', 'usinas', 'diagnostico', 'outras-solucoes', 'perguntas-frequentes', 'cta-final'],
 };
 export const SECTION_LABEL = {
-  topo: 'Topo (hero)', numeros: 'Números', 'para-quem': 'Para quem é', modelo: 'Como funciona', rentabilidade: 'De onde vem a renda',
+  topo: 'Topo (hero)', numeros: 'Números', 'para-quem': 'Para quem é', modelo: 'Como funciona', rentabilidade: 'De onde vem a renda', investimento: 'Investimento x retorno',
   gestao: 'O que a 4E assume', seguranca: 'Segurança do investimento', sobre: 'Quem é a 4E', usinas: 'Usinas (galeria)', diagnostico: 'Diagnóstico (formulário)',
   'outras-solucoes': 'Outras soluções', 'perguntas-frequentes': 'FAQ', 'cta-final': 'CTA final', politica: 'Política',
 };

@@ -16,7 +16,7 @@ Tudo o que a LP mostra sem confirmação do cliente está marcado aqui. Nada aba
 | Fotos reais de usinas, BESS e equipe em campo | hero, para quem, como funciona, gestão, sobre, galeria, diagnóstico, soluções, CTA final | **9 fotos ilustrativas do Unsplash** (`public/images/*-{480,960,1600}.webp`, manifesto em `src/lib/images.json`), todas legendadas como ilustrativas. Trocar pelas reais mantendo os nomes e regenerar com sharp (comando no README) |
 | Autorização para exibir logos de HES HUB, SEBRAE, Xper e Ubantec | seção "Quem é a 4E" | nomes em texto, sem logos |
 | Confirmar "centenas de projetos concluídos" e "+30 usinas sob gestão" | hero, segurança, sobre, llms.txt | vindos do briefing; confirmar antes dos anúncios |
-| "Potencial de até 3,6% ao mês" | seção "De onde vem a renda" | **fora da v1** por decisão do Pedro; entra com aviso legal após aprovação |
+| Faixas investimento x renda (R$ 50/100/200 mil → até R$ 1.600/3.600/7.200 por mês) | seção `investimento`, FAQ, llms.txt | **enviadas pelo cliente em 26/10/2026**, publicadas com o aviso dele ("Valores estimados, não garantidos...") |
 | Faixas de capital do formulário | `src/lib/lead.ts` | até 50k · 50 a 150k · 150 a 500k · acima de 500k (sugestão) |
 | Capital mínimo real por projeto | FAQ "Quanto preciso investir?" | resposta genérica |
 | Prazo médio de construção e conexão | FAQ | resposta genérica |

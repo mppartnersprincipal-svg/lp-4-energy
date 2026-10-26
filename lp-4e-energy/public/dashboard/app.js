@@ -7,10 +7,10 @@
   var CH = { google_ads: 'Google Ads', google_organic: 'Google (orgânico)', instagram: 'Instagram', meta_ads: 'Meta Ads', facebook: 'Facebook', direct: 'Direto', referral: 'Indicação', search_other: 'Outros buscadores', other: 'Outro' };
   var PAGE = { home: 'LP (página inicial)', politica: 'Política de privacidade', '?': 'Não identificada' };
   var CONSENT = { accepted: 'Aceitou', essential: 'Só o essencial', nao_respondeu: 'Não respondeu' };
-  var SECTION = { flutuante: 'Botão flutuante', 'barra-mobile': 'Barra fixa (celular)', menu: 'Menu (celular)', header: 'Topo do site', footer: 'Rodapé', topo: 'Topo (hero)', numeros: 'Números', 'para-quem': 'Para quem é', modelo: 'Como funciona', rentabilidade: 'De onde vem a renda', gestao: 'O que a 4E assume', seguranca: 'Segurança do investimento', sobre: 'Quem é a 4E', usinas: 'Usinas (galeria)', diagnostico: 'Diagnóstico (formulário)', 'outras-solucoes': 'Outras soluções', 'perguntas-frequentes': 'FAQ', 'cta-final': 'CTA final', politica: 'Política', 'nao-encontrada': 'Página 404' };
+  var SECTION = { flutuante: 'Botão flutuante', 'barra-mobile': 'Barra fixa (celular)', menu: 'Menu (celular)', header: 'Topo do site', footer: 'Rodapé', topo: 'Topo (hero)', numeros: 'Números', 'para-quem': 'Para quem é', modelo: 'Como funciona', rentabilidade: 'De onde vem a renda', investimento: 'Investimento x retorno', gestao: 'O que a 4E assume', seguranca: 'Segurança do investimento', sobre: 'Quem é a 4E', usinas: 'Usinas (galeria)', diagnostico: 'Diagnóstico (formulário)', 'outras-solucoes': 'Outras soluções', 'perguntas-frequentes': 'FAQ', 'cta-final': 'CTA final', politica: 'Política', 'nao-encontrada': 'Página 404' };
   // cta_id dos botões (data-cta / data-cta-id nos componentes) e form_id do diagnóstico
   var CTA = {
-    cta_whatsapp_navbar: 'Topo do site', cta_whatsapp_hero: 'Hero', cta_whatsapp_modelo: 'Como funciona', cta_whatsapp_rentabilidade: 'Pedir uma projeção',
+    cta_whatsapp_navbar: 'Topo do site', cta_whatsapp_hero: 'Hero', cta_whatsapp_modelo: 'Como funciona', cta_whatsapp_rentabilidade: 'Pedir uma projeção', cta_whatsapp_investimento: 'Investimento x retorno',
     cta_whatsapp_seguranca: 'Segurança (tirar dúvidas)', cta_whatsapp_faq: 'FAQ', cta_whatsapp_final: 'CTA final', cta_whatsapp_footer: 'Rodapé (ícone)',
     cta_whatsapp_footer_contato: 'Rodapé (atendimento)', cta_whatsapp_menu: 'Menu (celular)', cta_whatsapp_barra_mobile: 'Barra fixa (celular)',
     fab_whatsapp: 'Botão flutuante', cta_whatsapp_404: 'Página 404',

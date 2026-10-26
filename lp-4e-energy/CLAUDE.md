@@ -47,7 +47,7 @@ src/
 │                   opengraph-image, icon.png, apple-icon.png, api/{collect,login,dashboard,ga4,google-ads}
 ├── components/
 │   ├── layout/     Header (nav por âncora + WhatsApp), MobileMenu, Footer, Logo/RingMark, WhatsAppFloat, MobileCtaBar
-│   ├── sections/   Hero (anel + clip-path), Marquee, Stats, AudienceFit, HowItWorks (scrollytelling), RevenueModel,
+│   ├── sections/   Hero (anel + clip-path), Marquee, Stats, AudienceFit, HowItWorks (scrollytelling), RevenueModel, InvestmentReturn (faixas investimento x renda),
 │   │               ManagementGrid (GlowCard), SecurityBlocks (Seal), About (parallax), Gallery (bento), DiagnosticSection
 │   │               (+DiagnosticForm), OtherSolutions, FaqSection, FinalCta
 │   ├── motion/     Reveal (CSS) + RevealObserver (1 IntersectionObserver), Counter, SmoothScroll
@@ -65,7 +65,7 @@ src/
 public/brand (logo recortado do JPEG) · public/dashboard (UI do painel) · public/llms.txt
 ```
 
-**Seções (`id`, na ordem):** `topo`, `numeros`, `para-quem`, `modelo`, `rentabilidade`, `gestao`, `seguranca`, `sobre`, `usinas`, `diagnostico`, `outras-solucoes`, `perguntas-frequentes`, `cta-final`. Toda `<section>` nova precisa de `id` (funil do painel + `section_view`) e da classe `cv-auto` se ficar abaixo da dobra.
+**Seções (`id`, na ordem):** `topo`, `numeros`, `para-quem`, `modelo`, `rentabilidade`, `investimento`, `gestao`, `seguranca`, `sobre`, `usinas`, `diagnostico`, `outras-solucoes`, `perguntas-frequentes`, `cta-final`. Toda `<section>` nova precisa de `id` (funil do painel + `section_view`) e da classe `cv-auto` se ficar abaixo da dobra.
 
 ---
 
@@ -108,7 +108,7 @@ Destaque em títulos: `<Highlight>` (ciano no navy; sublinhado ciano no claro). 
 ## Regras do projeto
 
 - Não inventar números, depoimentos, selos ou logos de parceiros. O que falta está em `docs/PENDENCIAS.md`.
-- Nunca escrever "venda de energia". Rentabilidade só como estimativa ("potencial", "até", condições) com aviso legal (`LEGAL_NOTICE` no rodapé). O "até 3,6% ao mês" está fora da v1 até o Marcos aprovar.
+- Nunca escrever "venda de energia". Rentabilidade só como estimativa ("potencial", "até", condições) com aviso legal (`LEGAL_NOTICE` no rodapé). Valores de renda só os enviados pelo cliente (`INVESTMENT` em `home.ts`, 26/10/2026), sempre com o aviso "*Valores estimados, não garantidos..." colado neles.
 - Sem travessão na copy. Tom formal e consultivo (manual).
 - Hero: elementos candidatos a LCP não podem começar com `opacity: 0` (usar `.enter`, só transform). `Reveal` é CSS + `RevealObserver`; não voltar a usar molas por elemento (TBT).
 - `content-visibility: auto` (`.cv-auto`) nas seções abaixo da dobra: capturas de página inteira precisam forçar `content-visibility: visible` (o `scripts/qa.mjs` já faz).
@@ -137,5 +137,7 @@ npx lighthouse http://localhost:3000/ --preset=perf --form-factor=mobile --scree
 Ver `docs/PENDENCIAS.md` (cliente) e `../MEMORY.md` (internas). Resumo: WhatsApp, domínio, CNPJ/endereço, logo vetorial, fotos reais, logos de parceiros, aprovação do Marcos, IDs de GTM/GA4/Ads/Pixel, variáveis da Vercel, migration do Supabase, repo e projeto Vercel.
 
 ## Histórico
+
+- 2026-10-26 — Seção `investimento` (Investimento x retorno: R$ 50/100/200 mil → até R$ 1.600/3.600/7.200 por mês, com aviso) logo após `rentabilidade`, a pedido do cliente; FAQ de terreno e de investimento atualizadas.
 
 - 2026-10-21 — Plano + design system aprovados (checkpoint da Fase 0). LP criada a partir do modelo da Pádua: 11 seções, formulário de diagnóstico, tracking fase 1, SEO/GEO, painel portado, 98 testes verdes, QA Playwright e Lighthouse mobile (ver `../MEMORY.md`).
