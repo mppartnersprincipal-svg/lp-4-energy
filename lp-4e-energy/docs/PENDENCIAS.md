@@ -8,7 +8,8 @@ Tudo o que a LP mostra sem confirmação do cliente está marcado aqui. Nada aba
 |---|---|---|
 | WhatsApp comercial | todos os botões e schema | **(62) 9 9607-1233** (`5562996071233` em `src/lib/site.ts`), confirmado em 26/10/2026 |
 | Domínio final | canonical, OG, sitemap, Schema (`NEXT_PUBLIC_SITE_URL`) | **4eenergy.com.br** (26/10/2026), substituindo o site antigo do construtor da GoDaddy; DNS na GoDaddy: A `@` → 216.198.79.1 e 64.29.17.1, CNAME `www` → Vercel. E-mail (MX/SPF) mantido |
-| CNPJ, razão social, endereço | rodapé, política de privacidade, Schema | **PENDENTE**: `cnpj: null`, `address: null` (blocos ocultos) |
+| Endereço | rodapé, Schema, llms.txt | **OK** (26/10/2026): Rua 5, nº 77, Jardim Decolores, Trindade/GO, CEP 75385-218 |
+| CNPJ e razão social | rodapé, política de privacidade, Schema | **PENDENTE**: o CNPJ enviado (62.877.984/0001-40, 4ENERGY SOLUCOES INTELIGENTES LTDA) consta **BAIXADO** na Receita desde 06/05/2026 (liquidação voluntária). Pedir ao cliente o CNPJ ativo; `cnpj: null` até lá |
 | E-mail institucional | rodapé, política, Schema | placeholder `contato@4eenergy.com.br` |
 | Horário de atendimento | rodapé | "Segunda a sexta, das 8h às 18h" (a confirmar) |
 | Logo em vetor (SVG/AI/PDF) | header, ícone, OG | usando recorte do JPEG (`public/brand/`) |

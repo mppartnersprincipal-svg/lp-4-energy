@@ -106,7 +106,7 @@ export async function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <IconPino className="size-4 shrink-0 text-cyan" />
-              {SITE.address ? `${SITE.address.street}, ${SITE.address.city}/${SITE.address.state}` : "Goiás"}
+              {SITE.address ? `${SITE.address.street}, ${SITE.address.city}/${SITE.address.state}, CEP ${SITE.address.postalCode}` : "Goiás"}
             </li>
           </ul>
         </div>
