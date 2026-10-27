@@ -16,7 +16,8 @@ const DEFAULT_WHATSAPP = "5562996071233";
 
 export const SITE = {
   name: "4E Energy",
-  legalName: "4E Energy",
+  // Razão social e CNPJ conferidos na Receita em 27/10/2026 (ATIVA desde 07/02/2025)
+  legalName: "MDM & 4E Energy Eficiência Energética Ltda",
   tagline: "Usinas fotovoltaicas para investidores",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://4eenergy.com.br",
   // PLACEHOLDER: e-mail institucional
@@ -24,9 +25,8 @@ export const SITE = {
   instagramUrl: "https://www.instagram.com/4eenergy/",
   instagramHandle: "@4eenergy",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? DEFAULT_WHATSAPP,
-  // CNPJ (null esconde): o enviado em 26/10/2026 (62.877.984/0001-40) está BAIXADO na Receita desde 06/05/2026;
-  // fica fora até o cliente confirmar o CNPJ ativo (docs/PENDENCIAS.md)
-  cnpj: null as null | string,
+  // CNPJ (null esconde). O 62.877.984/0001-40, enviado antes, era de outra empresa (BAIXADA): não usar
+  cnpj: "59.340.742/0001-09" as null | string,
   // Endereço enviado pelo cliente em 26/10/2026; CEP conferido na Receita/ViaCEP
   address: {
     street: "Rua 5, nº 77, Jardim Decolores",

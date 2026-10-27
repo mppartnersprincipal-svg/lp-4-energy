@@ -28,7 +28,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 ### Com o cliente (detalhe em `lp-4e-energy/docs/PENDENCIAS.md`)
 - [x] WhatsApp comercial (62) 9 9607-1233 e domínio 4eenergy.com.br (26/10/2026)
 - [x] Endereço: Rua 5, nº 77, Jardim Decolores, Trindade/GO, CEP 75385-218 (26/10/2026)
-- [ ] CNPJ ativo: o enviado (62.877.984/0001-40) está BAIXADO na Receita desde 06/05/2026; fora da LP até confirmação
+- [x] CNPJ 59.340.742/0001-09, MDM & 4E Energy Eficiência Energética Ltda, ATIVA (27/10/2026): rodapé, política e schema
 - [ ] E-mail institucional
 - [ ] Logo em vetor, fotos reais (usinas, BESS, equipe, Marcos), autorização dos logos de parceiros
 - [ ] Confirmar números de prova ("+30 usinas", "centenas de projetos") antes dos anúncios
@@ -65,6 +65,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 | 2026-10-26 | Seção própria "Investimento x retorno" (`#investimento`, navy) logo após "De onde vem a renda", com as 3 faixas do cliente, aviso colado nos valores e CTA `cta_whatsapp_investimento` | Pedido do cliente para destacar o tema; seção própria dá URL final para anúncio e linha no funil do painel |
 | 2026-10-26 | Rodada SEO/GEO para o Search Console: menu "Rentabilidade" → `#investimento`; `llms.txt` virou rota gerada da copy (links Markdown); `lastmod` no sitemap; meta de verificação opcional (`GOOGLE_SITE_VERIFICATION`); FAQ "Quanto rende..."; favicon 512 px/176 KB → 192 px/12 KB. Lighthouse mobile local: Perf 81 a 88, LCP 3,5 a 3,7 s, A11y/BP/SEO/Agentic 100; desktop 99 ; GTM `afterInteractive` → `lazyOnload` (em produção gtm.js + gtag ~340 KB rodavam antes da primeira pintura: LCP mobile 6,2 a 8,0 s, Perf 51 a 66) | Pedro pediu LP 100% otimizada para SEO e GEO e qualidade "ótima/excelente" |
 | 2026-10-26 | Endereço publicado (rodapé, schema, llms.txt); CNPJ 62.877.984/0001-40 NÃO publicado | Receita (BrasilAPI e ReceitaWS): BAIXADO em 06/05/2026 por liquidação voluntária, aberto em 24/09/2025; Pedro decidiu segurar até o cliente confirmar o CNPJ ativo |
+| 2026-10-27 | CNPJ 59.340.742/0001-09 publicado; `legalName` = razão social "MDM & 4E Energy Eficiência Energética Ltda" (rodapé ©, política LGPD, schema `legalName` + `taxID`); nome de marca segue "4E Energy" | Conferido na Receita (BrasilAPI): ATIVA desde 07/02/2025. A LP diz "desde 2022" (foundingDate 2022): CNPJ é de 2025, confirmar com o cliente |
 | 2026-10-22 | LP aprovada pelo Pedro ("ÓTIMO! Ficou muito bom!"). Primeiro commit enviado para `lp-4-energy`; LP salva como referência na skill `landing-page-references` (`sites/lp-4e-energy`, `patterns.md` consolidado) |
 | 2026-10-22 | SEO/GEO implementado com as skills `claude-seo` (title/description nos limites, H2 em pergunta, bloco de definição citável, links para Lei 14.300 e ANEEL, datas de revisão, schemas WebPage/Person, robots com OAI-SearchBot/Claude-SearchBot/Applebot) | Pedro perguntou se a LP estava otimizada para SEO e GEO; a base estava, faltavam citabilidade, datas, fontes e crawlers de citação |
 | 2026-10-22 | CTAs com efeito "liquid glass" (pedido do Pedro, a partir de um componente shadcn): integrado no `Button` próprio com CSS + filtro SVG, sem instalar shadcn/Radix/cva | Projeto não usa shadcn; o efeito é só `backdrop-filter` + sombras internas |

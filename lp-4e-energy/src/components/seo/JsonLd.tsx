@@ -55,6 +55,7 @@ export function buildOrganizationSchema(): JsonLdData {
     knowsAbout: KNOWS_ABOUT,
     slogan: "Energia Inteligente · Economia · Sustentabilidade",
   };
+  if (SITE.cnpj) schema.taxID = SITE.cnpj;
   // Só publica telefone/endereço quando o cliente enviar os dados reais
   if (hasRealPhone()) {
     schema.telephone = `+${SITE.whatsappNumber}`;
