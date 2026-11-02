@@ -192,7 +192,7 @@ export function DiagnosticForm() {
       </div>
 
       <fieldset className="flex flex-col gap-3">
-        <legend className={LABEL}>Já possui área ou terreno? (opcional)</legend>
+        <legend className={LABEL}>Já possui área de telhado ou terreno? (opcional)</legend>
         <div className="flex flex-wrap gap-2">
           {LAND_OPTIONS.map((option) => {
             const isSelected = values.hasLand === option.value;

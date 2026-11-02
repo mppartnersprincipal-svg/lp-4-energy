@@ -20,7 +20,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata = buildMetadata({
   title: "Usina Solar para Investidores em Goiás | 4E Energy",
   description:
-    "Usina fotovoltaica gerida em Goiás: a 4E Energy constrói, capta a carteira de consumidores e opera. Renda recorrente com um ativo real, sem você operar nada.",
+    "Usina solar de investimento em Goiás: a 4E Energy constrói, capta a carteira de consumidores e opera. Renda recorrente com um ativo real, sem você operar nada.",
   path: "/",
   isAbsoluteTitle: true,
 });

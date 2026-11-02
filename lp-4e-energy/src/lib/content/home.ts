@@ -27,7 +27,7 @@ import type { PhotoName } from "@/lib/images";
 type Icon = ComponentType<IconProps>;
 
 /** Data da última revisão do conteúdo (aparece no rodapé e no schema WebPage). Atualizar a cada mudança de copy. */
-export const CONTENT_UPDATED_AT = "2026-10-26";
+export const CONTENT_UPDATED_AT = "2026-11-02";
 export const CONTENT_PUBLISHED_AT = "2026-10-22";
 
 /** Fontes oficiais citadas na página (links externos com rel="noopener") */
@@ -96,12 +96,12 @@ export interface Stat {
 }
 
 export const STATS = {
-  eyebrow: "O que é uma usina gerida",
-  title: "O que é uma usina fotovoltaica gerida para investidores?",
+  eyebrow: "O que é uma usina de investimento",
+  title: "O que é uma usina fotovoltaica de investimento?",
   titleMuted: "Investir em energia não é aposta. É operação bem feita, todos os dias.",
   // Bloco de definição, autocontido (GEO): responde à pergunta do título sem depender do resto da página
   definition:
-    "Uma usina fotovoltaica gerida para investidores é uma usina solar de solo construída em nome do investidor e administrada por uma empresa especializada. A 4E Energy faz o estudo de viabilidade, constrói e conecta a usina à distribuidora, capta empresas e residências para a energia por assinatura e assume a operação, a manutenção mensal e os relatórios. Os consumidores da carteira recebem os créditos de energia com até 30% de desconto na conta de luz e pagam uma mensalidade; essa receita, descontados os custos de gestão, é a renda recorrente do investidor. O modelo segue o marco legal da geração distribuída, a Lei nº 14.300/2022, e é regulado pela ANEEL. Em Goiás, a 4E Energy atua desde 2022 e mantém mais de 30 usinas sob gestão.",
+    "Uma usina fotovoltaica de investimento é uma usina solar construída em nome do investidor e administrada por uma empresa especializada. A 4E Energy faz o estudo de viabilidade, constrói e conecta a usina à distribuidora, capta empresas e residências para a energia por assinatura e assume a operação, a manutenção mensal e os relatórios. Os consumidores da carteira recebem os créditos de energia com até 30% de desconto na conta de luz e pagam uma mensalidade; essa receita, descontados os custos de gestão, é a renda recorrente do investidor. O modelo segue o marco legal da geração distribuída, a Lei nº 14.300/2022, e é regulado pela ANEEL. Em Goiás, a 4E Energy atua desde 2022 e mantém mais de 30 usinas sob gestão.",
   items: [
     { value: 30, prefix: "+", label: "usinas sob gestão", detail: "monitoradas e mantidas pela 4E" },
     { value: null, text: "2022", label: "no mercado de energia", detail: "projetos e parcerias desde o início" },
@@ -142,10 +142,10 @@ export interface Step {
 
 export const HOW_IT_WORKS = {
   eyebrow: "Como funciona",
-  title: "Como funciona uma usina gerida para investidores?",
+  title: "Como funciona uma usina solar de investimento?",
   titleHighlight: "Em quatro etapas.",
   description:
-    "Uma usina fotovoltaica gerida para investidores funciona assim: a 4E Energy executa cada etapa e você acompanha o resultado.",
+    "Uma usina fotovoltaica de investimento funciona assim: a 4E Energy executa cada etapa e você acompanha o resultado.",
   steps: [
     {
       icon: IconEstudo,
@@ -291,7 +291,7 @@ export interface SecurityItem {
 
 export const SECURITY = {
   eyebrow: "Segurança do investimento",
-  title: "É seguro investir em uma usina solar gerida?",
+  title: "É seguro investir em uma usina solar?",
   titleHighlight: "As três perguntas que todo investidor faz, e as nossas respostas.",
   seal: "ESTUDO DE VIABILIDADE • PROJEÇÃO CONSERVADORA • LEI Nº 14.300/2022 • ",
   items: [
@@ -351,11 +351,11 @@ export interface GalleryItem {
 
 export const GALLERY = {
   eyebrow: "Imagens ilustrativas",
-  title: "Como é uma usina de solo como as que operamos",
+  title: "Como é uma usina solar como as que operamos",
   titleMuted: "Fotos reais das usinas sob gestão entram nesta página assim que forem liberadas pelo cliente.",
   items: [
     { photo: "usina-campo", alt: "Usina de solo com módulos em campo verde (imagem ilustrativa)", tag: "Usina de solo", title: "Módulos em estrutura fixa" },
-    { photo: "usina-aerea-grama", alt: "Vista aérea de usina de solo (imagem ilustrativa)", tag: "Vista aérea", title: "Fileiras alinhadas ao sol" },
+    { photo: "telhado-empresa", alt: "Usina solar no telhado de um galpão ao entardecer (imagem ilustrativa)", tag: "Telhado de galpão", title: "Usina sobre a cobertura" },
     { photo: "usina-verde", alt: "Fileira de módulos fotovoltaicos sob céu azul (imagem ilustrativa)", tag: "Operação", title: "Geração em dia de céu limpo" },
     { photo: "tecnico-manutencao", alt: "Técnico fazendo manutenção em módulo (imagem ilustrativa)", tag: "Manutenção", title: "Rotina mensal em campo" },
   ] satisfies GalleryItem[],
@@ -363,7 +363,7 @@ export const GALLERY = {
 
 export const DIAGNOSTIC = {
   eyebrow: "Diagnóstico de investidor",
-  title: "Descubra se uma usina gerida",
+  title: "Descubra se uma usina de investimento",
   titleHighlight: "faz sentido para o seu capital.",
   description:
     "Responda em menos de um minuto. A conversa continua no WhatsApp com um especialista da 4E Energy, sem compromisso.",
@@ -433,9 +433,9 @@ export const FAQ: FaqItem[] = [
       "Cada projeto tem um estudo de viabilidade próprio, com faixas de investimento diferentes conforme a potência da usina e a área disponível. Como referência, um investimento de R$ 50 mil tem renda mensal estimada de até R$ 1.600, valor não garantido e sujeito à viabilidade e aos custos do projeto. Na primeira conversa apresentamos as opções compatíveis com o seu capital.",
   },
   {
-    question: "Preciso ter terreno?",
+    question: "Preciso ter terreno ou telhado?",
     answer:
-      "Não. Se você não tiver espaço para instalar, a 4E Energy providencia alternativas para viabilizar o seu projeto. Informe no diagnóstico se você já possui terreno ou área para a usina.",
+      "Não. A usina pode ser instalada em solo ou no telhado de galpões e, se você não tiver espaço para instalar, a 4E Energy providencia alternativas para viabilizar o seu projeto. Informe no diagnóstico se você já possui área de telhado ou terreno para a usina.",
   },
   {
     question: "Quem são os consumidores da usina?",
@@ -471,7 +471,7 @@ export const FAQ: FaqItem[] = [
 
 export const FINAL_CTA = {
   eyebrow: "Próximo passo",
-  title: "Quer saber se uma usina gerida faz sentido para o seu capital?",
+  title: "Quer saber se uma usina de investimento faz sentido para o seu capital?",
   description: "Fale com um especialista da 4E Energy. A primeira conversa é um diagnóstico, sem compromisso.",
   photo: "usina-solo-nuvens" as PhotoName,
 } as const;

@@ -123,8 +123,8 @@ export function buildServiceSchema(): JsonLdData {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Usina fotovoltaica gerida para investidores",
-    name: "Usina fotovoltaica gerida para investidores",
+    serviceType: "Usina fotovoltaica de investimento",
+    name: "Usina fotovoltaica de investimento",
     description:
       "Construção da usina fotovoltaica, captação e gestão da carteira de consumidores por assinatura, operação, manutenção e relatórios para o investidor.",
     url: `${SITE.url}/#modelo`,
@@ -135,7 +135,7 @@ export function buildServiceSchema(): JsonLdData {
       "@type": "OfferCatalog",
       name: "Soluções da 4E Energy",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Usina fotovoltaica gerida para investidores" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Usina fotovoltaica de investimento" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Energia por assinatura para empresas e residências" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gestão de usinas existentes" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "BESS e sistemas híbridos" } },

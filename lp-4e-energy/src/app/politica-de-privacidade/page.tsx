@@ -19,7 +19,7 @@ const SECTIONS = [
   {
     title: "2. Quais dados coletamos",
     body: [
-      "Diagnóstico de investidor: nome, WhatsApp, cidade, faixa de capital disponível, perfil (pessoa física ou empresa) e, se informado, se já possui área ou terreno. Esses dados não ficam armazenados nesta página: ao enviar, eles são levados para uma conversa no WhatsApp com a equipe da 4E Energy, onde o atendimento continua.",
+      "Diagnóstico de investidor: nome, WhatsApp, cidade, faixa de capital disponível, perfil (pessoa física ou empresa) e, se informado, se já possui área de telhado ou terreno. Esses dados não ficam armazenados nesta página: ao enviar, eles são levados para uma conversa no WhatsApp com a equipe da 4E Energy, onde o atendimento continua.",
       "Nas ferramentas de análise entram apenas as faixas escolhidas (capital e perfil), nunca nome, telefone ou cidade.",
       "Navegação: dados de uso coletados por ferramentas de análise e de anúncios (Google Analytics, Google Ads e Meta Pixel, via Google Tag Manager), por exemplo páginas visitadas, tipo de dispositivo e origem do acesso, incluindo parâmetros de campanha (UTMs).",
       "Estatística própria: registramos de forma anônima as seções vistas, os botões clicados, o tempo na página e a cidade aproximada (informada pelo provedor de hospedagem, sem guardar o endereço IP). Não usamos cookies nem dados pessoais para isso.",

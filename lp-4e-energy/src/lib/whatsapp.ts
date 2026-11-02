@@ -2,7 +2,7 @@ import { SITE } from "@/lib/site";
 import { getUtms } from "@/lib/tracking";
 
 export const DEFAULT_WHATSAPP_MESSAGE =
-  "Olá, vim pela página da 4E Energy e quero entender o investimento em usina solar gerida.";
+  "Olá, vim pela página da 4E Energy e quero entender o investimento em usina solar.";
 
 /** Sufixo com a origem da visita (UTMs), para o comercial saber de onde o lead veio. */
 export function originSuffix(utms: Record<string, string | undefined> = {}): string {

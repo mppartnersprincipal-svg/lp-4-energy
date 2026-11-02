@@ -1,6 +1,6 @@
 # LP — 4E Energy
 
-Landing page de conversão para investidores em usinas fotovoltaicas geridas (Goiás). Objetivo: levar o investidor a uma conversa qualificada no WhatsApp e servir de destino para Google Ads e Meta Ads.
+Landing page de conversão para investidores em usinas fotovoltaicas de investimento (Goiás). Objetivo: levar o investidor a uma conversa qualificada no WhatsApp e servir de destino para Google Ads e Meta Ads.
 
 > Plano aprovado, decisões e copy: `../PLANO.md`. Design system: `../DESIGN-SYSTEM.md`. Histórico e pendências: `../MEMORY.md` e `docs/PENDENCIAS.md`.
 
@@ -98,7 +98,7 @@ Destaque em títulos: `<Highlight>` (ciano no navy; sublinhado ciano no claro). 
 ## SEO e GEO (auditado com as skills `claude-seo:seo-page` e `claude-seo:seo-geo` em 22/10/2026; revisado em 26/10/2026)
 
 - Title ≤ 60 e description ≤ 160 (`layout.tsx` e `page.tsx`); um H1; H2 em forma de pergunta nas seções principais; frases secundárias fora dos H2 (em `<p>`); rodapé sem H2.
-- Bloco de definição citável ("O que é uma usina fotovoltaica gerida para investidores?") logo depois do marquee, em `STATS.definition`: autocontido, ~130 palavras, no primeiro terço da página. Manter atualizado com os números do cliente.
+- Bloco de definição citável ("O que é uma usina fotovoltaica de investimento?") logo depois do marquee, em `STATS.definition`: autocontido, ~130 palavras, no primeiro terço da página. Manter atualizado com os números do cliente.
 - Fontes oficiais com link (`SOURCES` em `lib/content/home.ts`): Lei nº 14.300/2022 (planalto) e ANEEL, usadas na seção de segurança, no FAQ, no `llms.txt` e no schema `WebPage.citation`.
 - Datas: `CONTENT_PUBLISHED_AT` e `CONTENT_UPDATED_AT` em `lib/content/home.ts` aparecem no rodapé (`<time>`) e no schema `WebPage`. **Atualizar `CONTENT_UPDATED_AT` sempre que a copy mudar** (recência pesa na citação por IA).
 - Schemas (JSON-LD): Organization+LocalBusiness (com `founder`), WebPage (datas, `citation`, `speakable`, `reviewedBy`), Service (com `hasOfferCatalog`), Person (Marcos Lamounier), FAQPage. `telephone`/`contactPoint`/`address` só entram quando os dados reais chegarem (`lib/site.ts`).
@@ -141,6 +141,7 @@ Ver `docs/PENDENCIAS.md` (cliente) e `../MEMORY.md` (internas). Resumo: WhatsApp
 
 ## Histórico
 
+- 2026-11-02 — A pedido do cliente: nomenclatura "usina gerida" trocada por "usina de investimento" em toda a página (copy, metadata, schema Service, llms.txt, mensagens do WhatsApp); usina não é só de solo, também em telhado de galpões (definição, galeria, FAQ "Preciso ter terreno ou telhado?", campo do formulário "Já possui área de telhado ou terreno?").
 - 2026-10-26 — Seção `investimento` (Investimento x retorno: R$ 50/100/200 mil → até R$ 1.600/3.600/7.200 por mês, com aviso) logo após `rentabilidade`, a pedido do cliente; FAQ de terreno e de investimento atualizadas.
 
 - 2026-10-21 — Plano + design system aprovados (checkpoint da Fase 0). LP criada a partir do modelo da Pádua: 11 seções, formulário de diagnóstico, tracking fase 1, SEO/GEO, painel portado, 98 testes verdes, QA Playwright e Lighthouse mobile (ver `../MEMORY.md`).

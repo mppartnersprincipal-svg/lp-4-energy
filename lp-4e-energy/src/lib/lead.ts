@@ -88,10 +88,10 @@ function labelOf<T extends readonly { value: string; label: string }[]>(options:
 export function buildLeadMessage(input: LeadInput, utms: Utms = {}): string {
   const lines = [
     `Olá, sou ${input.name.trim()}, de ${input.city.trim()}.`,
-    "Quero entender o investimento em usina solar gerida.",
+    "Quero entender o investimento em usina solar.",
     `Capital disponível: ${labelOf(CAPITAL_RANGES, input.capitalRange)}.`,
     `Perfil: ${labelOf(INVESTOR_TYPES, input.investorType)}.`,
   ];
-  if (input.hasLand) lines.push(`Área ou terreno próprio: ${labelOf(LAND_OPTIONS, input.hasLand)}.`);
+  if (input.hasLand) lines.push(`Área de telhado ou terreno próprio: ${labelOf(LAND_OPTIONS, input.hasLand)}.`);
   return `${lines.join("\n")}${originSuffix(utms)}`;
 }

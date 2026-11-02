@@ -45,7 +45,7 @@ describe("buildLeadMessage", () => {
     expect(message).toContain("Olá, sou Ana Souza, de Goiânia.");
     expect(message).toContain("Capital disponível: R$ 150 mil a R$ 500 mil.");
     expect(message).toContain("Perfil: Pessoa física.");
-    expect(message).toContain("Área ou terreno próprio: Ainda não sei.");
+    expect(message).toContain("Área de telhado ou terreno próprio: Ainda não sei.");
     expect(message).toMatch(/\(origem: google \/ pesquisa-investidor\)$/);
   });
 
