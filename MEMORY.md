@@ -27,7 +27,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 
 ### Com o cliente (detalhe em `lp-4e-energy/docs/PENDENCIAS.md`)
 - [x] WhatsApp comercial (62) 9 9607-1233 e domínio 4eenergy.com.br (26/10/2026)
-- [x] Endereço: Rua 5, nº 77, Jardim Decolores, Trindade/GO, CEP 75385-218 (26/10/2026)
+- [x] Endereço: Av. C-231, nº 687, Sala 03, esq. com C-229, Jardim América, Goiânia/GO, CEP 74290-030 (07/11/2026; substitui Rua 5, nº 77, Jardim Decolores, Trindade, de 26/10)
 - [x] CNPJ 59.340.742/0001-09, MDM & 4E Energy Eficiência Energética Ltda, ATIVA (27/10/2026): rodapé, política e schema
 - [ ] E-mail institucional
 - [ ] Logo em vetor, fotos reais (usinas, BESS, equipe, Marcos), autorização dos logos de parceiros

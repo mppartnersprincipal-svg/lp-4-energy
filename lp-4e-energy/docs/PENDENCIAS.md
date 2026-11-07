@@ -8,8 +8,8 @@ Tudo o que a LP mostra sem confirmação do cliente está marcado aqui. Nada aba
 |---|---|---|
 | WhatsApp comercial | todos os botões e schema | **(62) 9 9607-1233** (`5562996071233` em `src/lib/site.ts`), confirmado em 26/10/2026 |
 | Domínio final | canonical, OG, sitemap, Schema (`NEXT_PUBLIC_SITE_URL`) | **4eenergy.com.br** (26/10/2026), substituindo o site antigo do construtor da GoDaddy; DNS na GoDaddy: A `@` → 216.198.79.1 e 64.29.17.1, CNAME `www` → Vercel. E-mail (MX/SPF) mantido |
-| Endereço | rodapé, Schema, llms.txt | **OK** (26/10/2026): Rua 5, nº 77, Jardim Decolores, Trindade/GO, CEP 75385-218 |
-| CNPJ e razão social | rodapé, política de privacidade, Schema (`taxID`, `legalName`) | **OK** (27/10/2026): MDM & 4E Energy Eficiência Energética Ltda, CNPJ 59.340.742/0001-09, ATIVA desde 07/02/2025 (sede na Receita: Goiânia; endereço público da LP: Trindade). O 62.877.984/0001-40 enviado antes era de outra empresa, baixada |
+| Endereço | rodapé, Schema, llms.txt | **OK** (07/11/2026): Av. C-231, nº 687, Sala 03, esq. com C-229, Jardim América, Goiânia/GO, CEP 74290-030 (substitui o de Trindade, enviado em 26/10) |
+| CNPJ e razão social | rodapé, política de privacidade, Schema (`taxID`, `legalName`) | **OK** (27/10/2026): MDM & 4E Energy Eficiência Energética Ltda, CNPJ 59.340.742/0001-09, ATIVA desde 07/02/2025 (sede na Receita: Av. Perimetral Norte, Goiânia; endereço público da LP: Jardim América, Goiânia). O 62.877.984/0001-40 enviado antes era de outra empresa, baixada |
 | E-mail institucional | rodapé, política, Schema | placeholder `contato@4eenergy.com.br` |
 | Horário de atendimento | rodapé | "Segunda a sexta, das 8h às 18h" (a confirmar) |
 | Logo em vetor (SVG/AI/PDF) | header, ícone, OG | usando recorte do JPEG (`public/brand/`) |

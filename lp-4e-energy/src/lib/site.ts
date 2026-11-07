@@ -27,12 +27,12 @@ export const SITE = {
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? DEFAULT_WHATSAPP,
   // CNPJ (null esconde). O 62.877.984/0001-40, enviado antes, era de outra empresa (BAIXADA): não usar
   cnpj: "59.340.742/0001-09" as null | string,
-  // Endereço enviado pelo cliente em 26/10/2026; CEP conferido na Receita/ViaCEP
+  // Endereço da placa enviada pelo cliente em 07/11/2026 (substitui o de Trindade); CEP conferido no ViaCEP
   address: {
-    street: "Rua 5, nº 77, Jardim Decolores",
-    city: "Trindade",
+    street: "Av. C-231, nº 687, Sala 03, esq. com C-229, Jardim América",
+    city: "Goiânia",
     state: "GO",
-    postalCode: "75385-218",
+    postalCode: "74290-030",
   } as null | {
     street: string;
     city: string;
