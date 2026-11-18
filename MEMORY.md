@@ -16,7 +16,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 | LP (11 seções, formulário de diagnóstico, política, 404, OG image, sitemap, robots, llms.txt) | ✅ build e lint verdes |
 | Tracking fase 1 (dataLayer, UTMs, eventos, data-cta) | ✅ testado com Playwright (`scripts/qa.mjs`) |
 | Painel /dashboard (coletor, 5 rotas, UI com a marca, migration `energy4e_*`) | ✅ no ar; migrations 0001 e 0002 aplicadas pelo Pedro no projeto compartilhado (26/10); dados de teste zerados. Seções Google Ads e GA4 do painel ainda não conferidas |
-| GTM `GTM-WH5SJJB7` · GA4 `G-39VQ4LFZJS` · Ads `AW-18524866634` / `KIIsCOPkvqodEMqQrIFF` | ✅ contêiner importado e publicado (versão 2); teste no ar: `page_view`, `section_view`, `click_whatsapp` no GA4 e conversão do Ads no clique. Sem Meta Pixel |
+| GTM `GTM-WH5SJJB7` · GA4 `G-39VQ4LFZJS` · Ads `AW-18524866634` / `KIIsCOPkvqodEMqQrIFF` | ✅ contêiner importado e publicado (versão 2); teste no ar: `page_view`, `section_view`, `click_whatsapp` no GA4 e conversão do Ads no clique. Meta Pixel `1017360558061695` (16/11/2026): JSON em `gtm/GTM-WH5SJJB7-meta-pixel-importar.json` (base + PageView, PageView só em rota via pushState, Contact em `click_whatsapp`, Lead em `form_complete`); falta o Pedro importar e publicar |
 | Repo GitHub | ✅ `lp-4-energy`, branch `main` (22/10/2026) |
 | Vercel + domínio | ✅ 4eenergy.com.br (26/10/2026) |
 | Lighthouse mobile (build de produção, simulado), visual v2 | ⚠️ Performance 84 a 87 · SEO 100 · A11y 100 · Boas práticas 100 · LCP 3,9 a 4,1 s · CLS 0 · TBT 70 a 130 ms · desktop 100 (LCP 0,8 s). O LCP ficou no limite do gate (4 s): preço das fotos e das seções presas ao scroll, como na Visão Solar (66 a 78). Medir de novo em produção (PageSpeed) depois do deploy |
@@ -26,7 +26,7 @@ Memória do projeto entre sessões. Contexto fixo fica em `lp-4e-energy/CLAUDE.m
 ## Pendências
 
 ### Com o cliente (detalhe em `lp-4e-energy/docs/PENDENCIAS.md`)
-- [x] WhatsApp comercial (62) 9 9607-1233 e domínio 4eenergy.com.br (26/10/2026)
+- [x] WhatsApp comercial (62) 9 9622-4431 (18/11/2026; substitui (62) 9 9607-1233 de 26/10) e domínio 4eenergy.com.br (26/10/2026)
 - [x] Endereço: Av. C-231, nº 687, Sala 03, esq. com C-229, Jardim América, Goiânia/GO, CEP 74290-030 (07/11/2026; substitui Rua 5, nº 77, Jardim Decolores, Trindade, de 26/10)
 - [x] CNPJ 59.340.742/0001-09, MDM & 4E Energy Eficiência Energética Ltda, ATIVA (27/10/2026): rodapé, política e schema
 - [ ] E-mail institucional

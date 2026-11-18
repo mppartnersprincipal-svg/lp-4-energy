@@ -14,7 +14,7 @@ Landing page de conversão para investidores em usinas fotovoltaicas de investim
 | Segmento | Energia: construção de usinas fotovoltaicas para investidores + gestão da carteira de consumidores (energia por assinatura), gestão de usinas, BESS e híbridos |
 | Objetivo da LP | Conversa qualificada no WhatsApp (vendas diretas + autoridade) |
 | CTA principal | "Falar com um especialista" (WhatsApp) + formulário "Diagnóstico de investidor" |
-| WhatsApp | (62) 9 9607-1233 → `5562996071233` em `src/lib/site.ts` (`NEXT_PUBLIC_WHATSAPP_NUMBER` sobrescreve) |
+| WhatsApp | (62) 9 9622-4431 → `5562996224431` (desde 18/11/2026; antes 9 9607-1233) em `src/lib/site.ts` (`NEXT_PUBLIC_WHATSAPP_NUMBER` sobrescreve) |
 | URL de produção | `https://4eenergy.com.br` (domínio do cliente na GoDaddy; `www` redireciona 308 para o domínio principal na Vercel). Padrão de `NEXT_PUBLIC_SITE_URL` em `src/lib/site.ts` |
 | Ticket / ciclo (interno, não publicar) | R$ 45 mil · 20 dias · 3 etapas · 3 em 10 leads fecham |
 
