@@ -19,7 +19,7 @@ npm test        # Vitest (formulário, tracking) + node --test (analytics do pai
 | Google Tag Manager | `GTM-WH5SJJB7` | `NEXT_PUBLIC_GTM_ID` (Vercel) → `components/tracking/TrackingProvider.tsx` |
 | GA4 | `G-39VQ4LFZJS` | dentro do GTM |
 | Google Ads | conversão "Clique Botão de Wpp" `AW-18524866634` / `KIIsCOPkvqodEMqQrIFF` | dentro do GTM, disparada em `click_whatsapp` e `form_complete` |
-| Meta Pixel | `[PREENCHER]` (ainda não informado) | dentro do GTM (`Contact` em `click_whatsapp`, `Lead` em `form_complete`) |
+| Meta Pixel | `1017360558061695` | dentro do GTM (`Contact` em `click_whatsapp`, `Lead` em `form_complete`); importar `gtm/GTM-WH5SJJB7-meta-pixel-importar.json` |
 | Painel próprio | `/dashboard` | ver `DASHBOARD.md` |
 
 **Regra:** GA4, Ads e Pixel só pelo GTM. Nada de `gtag`/`fbq` direto no código (contaria em dobro).
